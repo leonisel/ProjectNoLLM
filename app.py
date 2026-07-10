@@ -8,61 +8,29 @@ from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import os
 from collections import defaultdict
-import sys
-import traceback
-import logging
 
-# Configure logging to see errors
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+# Import modular Jarvix v2.0
+from jarvix import Jarvix, InputParser, ResponseGenerator
+from jarvix.config import STORAGE_CONFIG
+
+# Override data file
+STORAGE_CONFIG['data_file'] = '/app/data/jarvix_v2_memory.json'
 
 def create_app():
-    """Create and configure the Flask application."""
-    
-    # Determine template folder
-    if os.path.exists('/app/templates'):
-        template_folder = '/app/templates'
-    elif os.path.exists('templates'):
-        template_folder = 'templates'
-    else:
-        template_folder = os.path.join(os.path.dirname(__file__), 'templates')
-    
-    logger.info(f"Using template folder: {template_folder}")
-    logger.info(f"Template folder exists: {os.path.exists(template_folder)}")
-    
-    app = Flask(__name__, template_folder=template_folder)
+    app = Flask(__name__, template_folder='/app/templates')
     CORS(app)
 
     agent = None
-    init_error = None
 
     def get_agent():
-        nonlocal agent, init_error
+        nonlocal agent
         if agent is None:
-            # Lazy import to avoid issues during build
-            try:
-                logger.info("Attempting to import and initialize Jarvix...")
-                from jarvix import Jarvix
-                data_file = os.environ.get('JARVIX_DATA_FILE', '/app/data/jarvix_v2_memory.json')
-                logger.info(f"Initializing Jarvix with data_file: {data_file}")
-                agent = Jarvix(data_file=data_file)
-                logger.info("Jarvix initialized successfully")
-            except Exception as e:
-                init_error = str(e)
-                logger.error(f"Failed to initialize Jarvix agent: {e}")
-                traceback.print_exc(file=sys.stderr)
-                return None
+            agent = Jarvix(data_file=STORAGE_CONFIG['data_file'])
         return agent
 
     @app.route('/')
     def index():
-        """Serve the main UI."""
-        try:
-            return render_template('index.html')
-        except Exception as e:
-            logger.error(f"Error rendering index.html: {e}")
-            traceback.print_exc()
-            return f"Error loading UI: {str(e)}", 500
+        return render_template('index.html')
 
     # ========== CORE CHAT & LEARNING ==========
 
@@ -77,8 +45,6 @@ def create_app():
         
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             response = agent.process_input(user_input)
             
             return jsonify({
@@ -88,7 +54,6 @@ def create_app():
                 'total_interactions': agent.memory.total_interactions,
             })
         except Exception as e:
-            logger.error(f"Error in /api/chat: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/stats', methods=['GET'])
@@ -96,14 +61,11 @@ def create_app():
         """Get agent statistics"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             return jsonify({
                 'success': True,
                 'stats': agent.get_stats(),
             })
         except Exception as e:
-            logger.error(f"Error in /api/stats: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/memory', methods=['GET'])
@@ -111,8 +73,6 @@ def create_app():
         """Get agent memory"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             
             memory_data = {}
             for topic, facts in agent.memory.facts.items():
@@ -129,7 +89,6 @@ def create_app():
                 'total_facts': sum(len(f) for f in agent.memory.facts.values()),
             })
         except Exception as e:
-            logger.error(f"Error in /api/memory: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/forget', methods=['POST'])
@@ -137,8 +96,6 @@ def create_app():
         """Clear all memories"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             agent.clear_memory()
             
             return jsonify({
@@ -146,7 +103,6 @@ def create_app():
                 'message': 'All memories erased. I am reborn!'
             })
         except Exception as e:
-            logger.error(f"Error in /api/forget: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/bulk-teach', methods=['POST'])
@@ -160,8 +116,6 @@ def create_app():
         
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             results = []
             
             for fact in facts:
@@ -180,7 +134,6 @@ def create_app():
                 'stats': agent.get_stats()
             })
         except Exception as e:
-            logger.error(f"Error in /api/bulk-teach: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     # ========== QUESTION ANSWERING ==========
@@ -196,11 +149,9 @@ def create_app():
         
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             
             if not agent.question_answerer.is_question(question):
-                question += "?"
+                question += "?"  # Ensure it's recognized as question
             
             answer = agent.question_answerer.answer_question(question)
             confidence = agent.question_answerer.get_answer_confidence(
@@ -214,7 +165,6 @@ def create_app():
                 'confidence': round(confidence, 2),
             })
         except Exception as e:
-            logger.error(f"Error in /api/ask: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     # ========== WEB LEARNING ==========
@@ -230,8 +180,6 @@ def create_app():
         
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             response = agent.learn_from_url(url)
             stats = agent.get_stats()
             
@@ -241,7 +189,6 @@ def create_app():
                 'stats': stats,
             })
         except Exception as e:
-            logger.error(f"Error in /api/learn-url: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/learn-text', methods=['POST'])
@@ -255,8 +202,6 @@ def create_app():
         
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             response = agent.learn_from_text(text)
             stats = agent.get_stats()
             
@@ -266,7 +211,6 @@ def create_app():
                 'stats': stats,
             })
         except Exception as e:
-            logger.error(f"Error in /api/learn-text: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/analyze-text', methods=['POST'])
@@ -280,8 +224,6 @@ def create_app():
         
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             analysis = agent.recursive_learner.analyze_text(text)
             
             return jsonify({
@@ -289,7 +231,6 @@ def create_app():
                 'analysis': analysis,
             })
         except Exception as e:
-            logger.error(f"Error in /api/analyze-text: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     # ========== IMAGINATION & CREATIVITY ==========
@@ -299,8 +240,6 @@ def create_app():
         """Generate imaginative thoughts"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             topic = request.args.get('topic', None)
             
             imagination = agent.imagine(topic)
@@ -310,7 +249,6 @@ def create_app():
                 'imagination': imagination,
             })
         except Exception as e:
-            logger.error(f"Error in /api/imagine: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/theorize', methods=['GET'])
@@ -318,8 +256,6 @@ def create_app():
         """Generate theories"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             topic = request.args.get('topic', None)
             
             theory = agent.theorize(topic)
@@ -329,7 +265,6 @@ def create_app():
                 'theory': theory,
             })
         except Exception as e:
-            logger.error(f"Error in /api/theorize: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/analogies', methods=['GET'])
@@ -337,8 +272,6 @@ def create_app():
         """Find analogies"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             topic1 = request.args.get('topic1', None)
             topic2 = request.args.get('topic2', None)
             
@@ -352,7 +285,6 @@ def create_app():
                 'analogies': analogs,
             })
         except Exception as e:
-            logger.error(f"Error in /api/analogies: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     # ========== CONVERSATION & PERSONALITY ==========
@@ -362,8 +294,6 @@ def create_app():
         """Get agent personality"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             personality = agent.get_personality()
             
             return jsonify({
@@ -371,7 +301,6 @@ def create_app():
                 'personality': personality,
             })
         except Exception as e:
-            logger.error(f"Error in /api/personality: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/thoughts', methods=['GET'])
@@ -379,8 +308,6 @@ def create_app():
         """Get autonomous thoughts"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             thought = agent.autonomous_thought()
             
             return jsonify({
@@ -388,7 +315,6 @@ def create_app():
                 'thought': thought or 'I have nothing to contemplate right now...'
             })
         except Exception as e:
-            logger.error(f"Error in /api/thoughts: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/history', methods=['GET'])
@@ -396,8 +322,6 @@ def create_app():
         """Get conversation history"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             limit = request.args.get('limit', 20, type=int)
             
             recent_history = agent.memory.conversation_history[-limit:]
@@ -408,7 +332,6 @@ def create_app():
                 'total': len(agent.memory.conversation_history),
             })
         except Exception as e:
-            logger.error(f"Error in /api/history: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/analyze/<topic>', methods=['GET'])
@@ -416,8 +339,6 @@ def create_app():
         """Analyze a topic"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             analysis = agent.analyze_topic(topic)
             
             return jsonify({
@@ -425,7 +346,6 @@ def create_app():
                 'analysis': analysis
             })
         except Exception as e:
-            logger.error(f"Error in /api/analyze: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/export', methods=['GET'])
@@ -433,8 +353,6 @@ def create_app():
         """Export all knowledge"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             exported = agent.export_memory()
             
             return jsonify({
@@ -442,14 +360,13 @@ def create_app():
                 'data': exported
             })
         except Exception as e:
-            logger.error(f"Error in /api/export: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/crawl', methods=['POST'])
     def crawl():
         """Crawl a URL, learn from it, return structured evaluation"""
-        data = request.json or {}
-        url = data.get('url', '').strip()
+        data  = request.json or {}
+        url   = data.get('url', '').strip()
         depth = int(data.get('depth', 1))
         pages = int(data.get('max_pages', 8))
 
@@ -460,18 +377,15 @@ def create_app():
 
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
             from jarvix.web_crawler import WebCrawler
             crawler = WebCrawler(agent,
                                  max_depth=min(depth, 2),
                                  max_pages=min(pages, 15))
-            report = crawler.crawl(url)
-            eval_ = crawler.build_evaluation(report)
+            report   = crawler.crawl(url)
+            eval_    = crawler.build_evaluation(report)
             return jsonify({'success': True, 'evaluation': eval_,
                             'stats': agent.get_stats()})
         except Exception as e:
-            logger.error(f"Error in /api/crawl: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/graph', methods=['GET'])
@@ -479,9 +393,7 @@ def create_app():
         """Return knowledge graph as nodes + edges for 2D visualisation"""
         try:
             agent = get_agent()
-            if not agent:
-                return jsonify({'error': f'Agent initialization failed: {init_error}'}), 503
-            g = agent.brain.graph
+            g     = agent.brain.graph
 
             # Build colour map by relation type
             REL_COLOR = {
@@ -495,56 +407,51 @@ def create_app():
 
             nodes = []
             for name, nd in g.nodes.items():
+                # Count edges touching this node
                 degree = sum(1 for (s, r, o) in g.edges
                              if s == name or o == name)
                 nodes.append({
-                    'id': name,
+                    'id':    name,
                     'label': name,
-                    'type': nd.node_type,
-                    'size': max(6, min(24, 6 + degree * 2)),
+                    'type':  nd.node_type,
+                    'size':  max(6, min(24, 6 + degree * 2)),
                 })
 
             edges = []
             for (s, r, o), data in g.edges.items():
                 edges.append({
-                    'source': s,
-                    'target': o,
-                    'relation': r,
+                    'source':     s,
+                    'target':     o,
+                    'relation':   r,
                     'confidence': round(data.confidence, 2),
-                    'inferred': data.inferred,
-                    'color': REL_COLOR.get(r, '#b2bec3'),
+                    'inferred':   data.inferred,
+                    'color':      REL_COLOR.get(r, '#b2bec3'),
                 })
 
             return jsonify({
                 'success': True,
-                'nodes': nodes,
-                'edges': edges,
+                'nodes':   nodes,
+                'edges':   edges,
                 'stats': {
-                    'nodes': len(nodes),
-                    'edges': len(edges),
+                    'nodes':    len(nodes),
+                    'edges':    len(edges),
                     'inferred': sum(1 for e in edges if e['inferred']),
                 }
             })
         except Exception as e:
-            logger.error(f"Error in /api/graph: {e}", exc_info=True)
             return jsonify({'error': str(e)}), 500
 
     @app.route('/api/health', methods=['GET'])
     def health():
         """Health check"""
-        agent = get_agent()
         return jsonify({
-            'status': 'healthy' if agent else 'degraded',
+            'status': 'healthy',
             'service': 'jarvix-v2',
-            'version': '2.0.0',
-            'agent_ready': agent is not None,
-            'init_error': init_error,
+            'version': '2.0.0'
         })
 
     return app
 
-# Create app at module level for Vercel
-app = create_app()
-
 if __name__ == '__main__':
+    app = create_app()
     app.run(host='0.0.0.0', port=5000, debug=False)
