@@ -9,13 +9,6 @@ from flask_cors import CORS
 import os
 from collections import defaultdict
 
-# Import modular Jarvix v2.0
-from jarvix import Jarvix, InputParser, ResponseGenerator
-from jarvix.config import STORAGE_CONFIG
-
-# Override data file
-STORAGE_CONFIG['data_file'] = '/app/data/jarvix_v2_memory.json'
-
 def create_app():
     app = Flask(__name__, template_folder='/app/templates')
     CORS(app)
@@ -25,7 +18,11 @@ def create_app():
     def get_agent():
         nonlocal agent
         if agent is None:
-            agent = Jarvix(data_file=STORAGE_CONFIG['data_file'])
+            # Lazy import to avoid issues during build
+            from jarvix import Jarvix
+            from jarvix.config import STORAGE_CONFIG
+            data_file = os.environ.get('JARVIX_DATA_FILE', '/app/data/jarvix_v2_memory.json')
+            agent = Jarvix(data_file=data_file)
         return agent
 
     @app.route('/')
@@ -453,7 +450,15 @@ def create_app():
     return app
 
 # Create app at module level for Vercel
-app = create_app()
+try:
+    app = create_app()
+except Exception as e:
+    # Fallback: create a minimal app if full initialization fails
+    app = Flask(__name__)
+    
+    @app.route('/api/health', methods=['GET'])
+    def health():
+        return jsonify({'status': 'error', 'message': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=False)
