@@ -10,12 +10,15 @@ Five new modules wired in:
 import json
 import os
 
+from .thought import ThoughtEngine
+from .thought_consolidator import ThoughtConsolidator
 from .config            import STORAGE_CONFIG, BEHAVIOR_CONFIG, AGENT_METADATA
 from .memory_store      import MemoryStore, STAGE_MASTERED
 from .brain             import Brain, CURIOSITY_THRESHOLD, MAX_REASONING_DEPTH
 from .working_memory    import WorkingMemory
 from .semantic_memory   import SemanticMemory
 from .logic_engine      import LogicEngine
+from .input_parser      import InputParser
 from .contradiction_detector import ContradictionDetector
 from .confidence_manager     import ConfidenceManager
 from .curiosity_engine       import CuriosityEngine
@@ -36,7 +39,8 @@ from .predictive_engine      import PredictiveEngine, PredictionError
 from .dreaming_engine        import DreamingEngine
 from .inner_voice            import InnerVoice
 from .response_generator     import ResponseGenerator
-
+from .knowledge_validator    import KnowledgeValidator
+from .ability_brain          import AbilityBrain
 
 class Jarvix:
     """Jarvix v6.0 — Predictive + Dreaming + Inner Voice architecture."""
@@ -44,11 +48,19 @@ class Jarvix:
     def __init__(self, data_file=None):
         # ── Core memory ────────────────────────────────────────────
         self.memory = MemoryStore(data_file=data_file)
+        self.ability = AbilityBrain()
         self.brain  = Brain(self.memory)
-
+        self.consolidator = ThoughtConsolidator(self.memory)
+        
+        
         # ── Cognitive architecture ─────────────────────────────────
+        self.input_parser = InputParser()
         self.working_memory  = WorkingMemory(max_turns=100)
+        self.thought_engine = ThoughtEngine()
         self.semantic_memory = SemanticMemory()
+        self.knowledge_validator = KnowledgeValidator(
+            self.semantic_memory
+        )
         self.logic_engine    = LogicEngine(self.semantic_memory)
         self.contradiction   = ContradictionDetector(self.semantic_memory)
         self.confidence_mgr  = ConfidenceManager()
@@ -160,7 +172,18 @@ class Jarvix:
     def process_input(self, raw: str) -> str:
         if not raw or not raw.strip():
             return "I'm listening — go ahead!"
+        raw = raw.strip()
 
+        # -------------------------------------------------
+        # Ability Brain
+        # -------------------------------------------------
+
+        if self.ability.can_handle(raw):
+            result = self.ability.execute(raw)
+            if result is not None:
+                return result
+
+        
         self.interaction_count         += 1
         self.memory.total_interactions += 1
 
@@ -179,8 +202,26 @@ class Jarvix:
 
         voice_ctx = self.inner_voice.pre_process(
             raw.strip(), ctx_topic=ctx_topic, last_intent=last_intent)
+        # ------------------------------------------------
+        # Thought Engine
+        # Creates internal reasoning goals
+        # ------------------------------------------------
 
-        # ── Executive controller: main pipeline ────────────────────
+        try:
+            if hasattr(self, "input_parser"):
+
+                parse_result = self.input_parser.parse(
+                    raw.strip()
+                )
+
+                self.thought_engine.think(
+                    parse_result
+                )
+
+        except Exception:
+            pass
+    
+
         response = self.ec.process(raw.strip(), _agent=self)
 
         # ── InnerVoice post-process: measure error + refine ────────
@@ -222,6 +263,16 @@ class Jarvix:
         # ── Dream every 25 turns (background maintenance) ──────────
         if n % 25 == 0 and n > 0:
             self._run_dream_cycle()
+
+        return response
+        # ------------------------------------------------
+        # Thought Consolidation
+        # ------------------------------------------------
+
+        try:
+            self.consolidator.run_cycle()
+        except Exception as e:
+            print(f"[ThoughtConsolidator] {e}")
 
         return response
 

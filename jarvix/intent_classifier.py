@@ -35,13 +35,23 @@ class Intent:
     CLARIFY      = 7
     DEFINITION   = 8
     EXAMPLE      = 9
-    UNKNOWN      = 10
+    ABILITY      = 10
+    UNKNOWN      = 11
 
     _NAMES = {
-        0: "CHAT", 1: "QUESTION", 2: "TEACH", 3: "MEMORY_QUERY",
-        4: "IDENTITY", 5: "COMMAND", 6: "WEB_REQUEST", 7: "CLARIFY",
-        8: "DEFINITION", 9: "EXAMPLE", 10: "UNKNOWN",
-    }
+    0:"CHAT",
+    1:"QUESTION",
+    2:"TEACH",
+    3:"MEMORY_QUERY",
+    4:"IDENTITY",
+    5:"COMMAND",
+    6:"WEB_REQUEST",
+    7:"CLARIFY",
+    8:"DEFINITION",
+    9:"EXAMPLE",
+    10:"ABILITY",
+    11:"UNKNOWN",
+}
 
     @classmethod
     def name(cls, code: int) -> str:
@@ -52,6 +62,7 @@ class Intent:
 class IntentResult:
     code:       int             # Intent.* constant
     confidence: float = 1.0    # how certain we are (rule-based = always 1.0)
+    intent:     str   = ""     # intent added
     subject:    str   = ""     # extracted subject if present
     predicate:  str   = ""     # extracted verb/relation phrase
     object_:    str   = ""     # extracted object / value
@@ -79,6 +90,30 @@ _QUESTION_STARTERS = frozenset([
     "is","are","do","does","did","can","could","will","would",
     "should","have","has","may","might",
 ])
+
+# ── Ability questions ───────────────────────────────────────
+
+ABILITY_VERBS = {
+    "count",
+    "read",
+    "write",
+    "learn",
+    "remember",
+    "forget",
+    "reason",
+    "think",
+    "talk",
+    "speak",
+    "crawl",
+    "search",
+    "calculate",
+    "draw",
+    "create",
+    "code",
+    "program",
+    "explain",
+    "answer",
+}
 
 # --- Memory queries (checked before generic question) ---
 _MEMORY_EXACT = frozenset([
@@ -255,7 +290,20 @@ class IntentClassifier:
         # ── 9. Clarification ─────────────────────────────────────────
         if clean in _CLARIFY_EXACT:
             return IntentResult(Intent.CLARIFY, object_=clean, raw=raw)
+        if (
+            len(words) >= 3
+            and words[0] == "can"
+            and words[1] == "you"
+        ):
+            verb = words[2]
 
+            if verb in ABILITY_VERBS:
+
+                return IntentResult(
+                    Intent.ABILITY,
+                    subject=verb,
+                    raw=raw
+                )
         # ── 10. Question ─────────────────────────────────────────────
         if raw.strip().endswith("?") or words[0] in _QUESTION_STARTERS:
             subj, obj = self._extract_question_focus(words)

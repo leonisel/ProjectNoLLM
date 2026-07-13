@@ -16,6 +16,17 @@ from .config import (
 )
 
 # Memory systems
+from .memory_classifier import (
+    MemoryClassifier,
+    MemoryClassification
+)
+
+from .neural_learner import NeuralLearner, TinyBrain
+from .reflection import ReflectionEngine
+
+from .memory_linker     import MemoryLinker
+from .memory_models     import Memory, MemoryType
+from .memory_manager    import MemoryManager
 from .memory_store      import MemoryStore
 from .working_memory    import WorkingMemory, WorkingMemoryState, Turn
 from .semantic_memory   import SemanticMemory, SemanticEdge, SemanticNode
