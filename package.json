@@ -1,0 +1,11 @@
+{
+  "name": "project-nollm",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "predev": "python -m pip install -r requirements.txt",
+    "dev": "python app.py",
+    "prestart": "python -m pip install -r requirements.txt",
+    "start": "python app.py"
+  }
+}

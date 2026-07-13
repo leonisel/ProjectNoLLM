@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jarvix NoLLM — Cognitive AI</title>
+  <!-- Vis Network CDN for beautiful interactive 2D graphs -->
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#667eea,#764ba2);min-height:100vh;padding:16px;color:#333}
@@ -31,7 +33,45 @@
     .btn-danger{background:#ff6b6b;color:#fff}.btn-danger:hover{background:#e55757}
     .btn-green{background:#00b894;color:#fff}.btn-green:hover{background:#00a381}
     button:disabled{opacity:.5;cursor:not-allowed}
-    .btn-group{display:flex;flex-direction:column;gap:8px;margin-top:auto;padding-top:12px}
+    .btn-group{display:flex;flex-direction:column;gap:8px;margin-top: auto; padding-top: 10px;}
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #202021; }
+    ::-webkit-scrollbar-thumb { background: #444; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+
+    button.tool-btn { 
+        display: flex; align-items: center; gap: 10px; width: 100%; padding: 10px 16px; 
+        background: transparent; border: none; color: #b5b5b5; text-align: left; cursor: pointer;
+        border-left: 3px solid transparent; transition: all 0.15s ease; font-size: 13px;
+    }
+    button.tool-btn:hover { background-color: #2d2d30; color: #ffffff; }
+    button.tool-btn.active { background-color: #2d2d30; border-left: 3px solid #f07b3f; color: #f07b3f; font-weight: bold; }
+    
+    .property-group { margin-bottom: 16px; background: #262627; padding: 10px; border-radius: 6px; border: 1px solid #2d2d2f; }
+    .property-group-title { font-size: 11px; font-weight: 700; color: #a0a0a0; text-transform: uppercase; margin-bottom: 8px; letter-spacing: 0.05em;}
+    .property-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+    .property-row label { font-size: 12px; color: #ccc; }
+    .input-row { display: flex; gap: 4px; margin-bottom: 4px; flex-grow: 1; }
+    .input-row span { font-size: 10px; color: #ff6b6b; width: 12px; text-align: center; line-height: 24px; font-weight: bold;}
+    .input-row span.m-green { color: #00b894; }
+    
+    .menu-item {
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 12px;
+      color: #555;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+    .menu-item:hover {
+      background: #f0f0f0;
+      color: #667eea;
+    }
 
     /* ── tabs ── */
     .tabs{display:flex;border-bottom:2px solid #eee;background:#fafafa;flex-shrink:0}
@@ -99,6 +139,14 @@
     .crawl-progress{background:#f0f7ff;border:1px solid #bee3f8;border-radius:8px;padding:10px 12px;font-size:12px;color:#2c5282;display:none}
 
     .empty-state{text-align:center;color:#bbb;padding:20px;font-size:13px}
+    
+    /* ── graph container ── */
+    #graph-container {
+      flex: 1;
+      width: 100%;
+      height: 100%;
+      background: #fafafa;
+    }
   </style>
 </head>
 <body>
@@ -107,7 +155,7 @@
   <!-- ── LEFT: Stats ── -->
   <div class="panel">
     <div class="panel-head">Status</div>
-    <div class="panel-body">
+    <div class="panel-body" style="display:flex; flex-direction:column;">
       <div class="stat">
         <div class="stat-label">Mood</div>
         <div class="stat-value"><span class="mood-dot m-curious" id="mood-dot"></span><span id="mood-text">Curious</span></div>
@@ -120,24 +168,27 @@
 
       <div class="btn-group">
         <button class="btn-sec" onclick="getThought()">💭 Thoughts</button>
+        <button class="btn-sec" onclick="doDream()">🌙 Dream Now</button>
+        <button class="btn-sec" onclick="doReflect()">🔍 Reflect</button>
         <button class="btn-sec" onclick="refreshStats()">↺ Refresh</button>
         <button class="btn-danger" onclick="doForget()">✕ Forget All</button>
       </div>
     </div>
   </div>
 
-  <!-- ── CENTRE: Chat + Crawler tabs ── -->
+  <!-- ── CENTRE: Chat + Crawler + Graph tabs ── -->
   <div class="panel">
     <div style="padding:12px 16px 4px;border-bottom:2px solid #667eea;flex-shrink:0;display:flex;align-items:center;gap:8px">
       <span style="font-size:20px">🧠</span>
       <span style="font-size:18px;font-weight:700;color:#667eea">Jarvix NoLLM</span>
-      <span style="font-size:12px;color:#aaa;margin-left:4px">v5.1</span>
+      <span style="font-size:12px;color:#aaa;margin-left:4px">v6.0</span>
     </div>
 
     <!-- tabs -->
     <div class="tabs">
       <div class="tab active" onclick="switchTab('chat',this)">💬 Chat</div>
       <div class="tab" onclick="switchTab('crawler',this)">🌐 Web Crawler</div>
+      <div class="tab" onclick="switchTab('graph',this); loadGraph();">📊 Knowledge Graph</div>
     </div>
 
     <!-- CHAT pane -->
@@ -179,7 +230,7 @@
             </select>
           </div>
           <button class="btn-green" id="btn-crawl" onclick="startCrawl()">
-            🌐 Crawl &amp; Learn
+            🌐 Crawl & Learn
           </button>
         </div>
 
@@ -189,6 +240,11 @@
 
         <div id="eval-output"></div>
       </div>
+    </div>
+
+    <!-- GRAPH pane -->
+    <div class="tab-pane" id="pane-graph" style="position:relative;">
+      <div id="graph-container"></div>
     </div>
   </div>
 
@@ -203,6 +259,8 @@
 </div>
 
 <script>
+let network = null;
+
 // ── tab switching ─────────────────────────────────────────────────
 function switchTab(name, el) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -271,7 +329,7 @@ function addMsg(text, role) {
   div.scrollTop = div.scrollHeight;
 }
 function escHtml(t) {
-  return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  return t.replace(/&/g,'&').replace(/</g,'<').replace(/>/g,'>');
 }
 function sysMsg(text) {
   const div = document.getElementById('messages');
@@ -319,6 +377,36 @@ function getThought() {
   fetch('/api/thoughts').then(r=>r.json()).then(d => {
     if (d.success) sysMsg('💭 ' + d.thought);
   });
+}
+
+function doDream() {
+  sysMsg('🌙 Initiating background consolidation dream cycle...');
+  fetch('/api/dream', { method: 'POST' })
+    .then(r => r.json())
+    .then(d => {
+      if (d.success) {
+        sysMsg('💤 Dream complete:\n' + d.report);
+        refreshStats();
+        updateMemory();
+      } else {
+        sysMsg('❌ Dream cycle failed: ' + d.error);
+      }
+    });
+}
+
+function doReflect() {
+  sysMsg('🔍 Initiating self-improvement reflection cycle...');
+  fetch('/api/reflect', { method: 'POST' })
+    .then(r => r.json())
+    .then(d => {
+      if (d.success) {
+        sysMsg('💡 Reflection complete:\n' + d.note);
+        refreshStats();
+        updateMemory();
+      } else {
+        sysMsg('❌ Reflection cycle failed: ' + d.error);
+      }
+    });
 }
 
 function doForget() {
@@ -435,13 +523,68 @@ function renderEval(ev) {
   document.getElementById('eval-output').innerHTML = html;
 }
 
+// ── vis-network graph loader ──────────────────────────────────────
+function loadGraph() {
+  const container = document.getElementById('graph-container');
+  container.innerHTML = '<div class="empty-state">Loading Knowledge Graph...</div>';
+  
+  fetch('/api/graph')
+    .then(r => r.json())
+    .then(data => {
+      if (!data.success || !data.nodes.length) {
+        container.innerHTML = '<div class="empty-state">No graph data available yet. Teach me some facts first!</div>';
+        return;
+      }
+      
+      container.innerHTML = '';
+      
+      const nodes = new vis.DataSet(data.nodes.map(n => ({
+        id: n.id,
+        label: n.label,
+        value: n.value,
+        title: n.title,
+        shape: 'dot',
+        color: {
+          background: n.id === 'jarvix' ? '#ff6b6b' : '#667eea',
+          border: '#764ba2',
+          highlight: { background: '#ffd93d', border: '#ff6b6b' }
+        },
+        font: { color: '#333', size: 12, face: 'Segoe UI' }
+      })));
+      
+      const edges = new vis.DataSet(data.edges);
+      
+      const graphData = { nodes, edges };
+      const options = {
+        nodes: {
+          scaling: { min: 10, max: 30 }
+        },
+        edges: {
+          font: { size: 10, align: 'middle' },
+          color: { inherit: 'from' },
+          smooth: { type: 'continuous' }
+        },
+        physics: {
+          barnesHut: { gravitationalConstant: -2000, centralGravity: 0.3, springLength: 95 },
+          stabilization: { iterations: 150 }
+        }
+      };
+      
+      network = new vis.Network(container, graphData, options);
+    })
+    .catch(err => {
+      container.innerHTML = `<div class="empty-state" style="color:#e74c3c;">Failed to load graph: ${err.message}</div>`;
+    });
+}
+
 // ── init ──────────────────────────────────────────────────────────
 window.addEventListener('load', () => {
   refreshStats();
   updateMemory();
   sysMsg("Hello! I'm Jarvix — a self-learning AI.\n" +
     "Chat: teach me facts, ask questions, or type /help for commands.\n" +
-    "Web Crawler: paste a URL in the Crawler tab to learn from any page.");
+    "Web Crawler: paste a URL in the Crawler tab to learn from any page.\n" +
+    "Knowledge Graph: view my live 2D semantic memory network!");
 });
 setInterval(refreshStats, 6000);
 setInterval(updateMemory, 6000);
