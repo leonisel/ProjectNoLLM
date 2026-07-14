@@ -5,6 +5,61 @@
       "properties": {},
       "aliases": []
     },
+    "reading": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "text_comprehension": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "learning": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "memory": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "reasoning": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "interaction": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "error_generation": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "vision": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "hearing": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "emotion": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "internet_access": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
     "read": {
       "node_type": "concept",
       "properties": {},
@@ -75,11 +130,6 @@
       "properties": {},
       "aliases": []
     },
-    "learning": {
-      "node_type": "concept",
-      "properties": {},
-      "aliases": []
-    },
     "acquiring new knowledge or skills": {
       "node_type": "concept",
       "properties": {},
@@ -106,11 +156,6 @@
       "aliases": []
     },
     "facts and information acquired": {
-      "node_type": "concept",
-      "properties": {},
-      "aliases": []
-    },
-    "memory": {
       "node_type": "concept",
       "properties": {},
       "aliases": []
@@ -1874,13 +1919,93 @@
       "node_type": "concept",
       "properties": {},
       "aliases": []
+    },
+    "three planets": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "earth, mars, and jupiter": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "you math": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "two planet": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "be mars and earth": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "two planets": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "one planet": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "multiple planets": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "multiple": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "attribute many": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "many": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "many numbers": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "more than one number": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "eaxmple of many numbers": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "1,2,3,4,5": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
+    },
+    "many numbers?": {
+      "node_type": "concept",
+      "properties": {},
+      "aliases": []
     }
   },
   "edges": [
     {
       "subject": "jarvix",
       "relation": "can",
-      "object": "read",
+      "object": "reading",
       "confidence": 1.0,
       "support": 2,
       "inferred": false,
@@ -1889,7 +2014,7 @@
     {
       "subject": "jarvix",
       "relation": "can",
-      "object": "understand text",
+      "object": "text_comprehension",
       "confidence": 0.9500000000000001,
       "support": 2,
       "inferred": false,
@@ -1898,25 +2023,25 @@
     {
       "subject": "jarvix",
       "relation": "can",
-      "object": "learn facts",
+      "object": "learning",
       "confidence": 1.0,
-      "support": 3,
+      "support": 2,
       "inferred": false,
       "source": "seed"
     },
     {
       "subject": "jarvix",
       "relation": "can",
-      "object": "remember",
+      "object": "memory",
       "confidence": 1.0,
-      "support": 3,
+      "support": 2,
       "inferred": false,
       "source": "seed"
     },
     {
       "subject": "jarvix",
       "relation": "can",
-      "object": "reason",
+      "object": "reasoning",
       "confidence": 0.9,
       "support": 2,
       "inferred": false,
@@ -1925,7 +2050,7 @@
     {
       "subject": "jarvix",
       "relation": "can",
-      "object": "answer questions",
+      "object": "interaction",
       "confidence": 0.8500000000000001,
       "support": 2,
       "inferred": false,
@@ -1934,7 +2059,7 @@
     {
       "subject": "jarvix",
       "relation": "can",
-      "object": "make mistakes",
+      "object": "error_generation",
       "confidence": 0.75,
       "support": 2,
       "inferred": false,
@@ -1943,25 +2068,25 @@
     {
       "subject": "jarvix",
       "relation": "opposite_of",
-      "object": "see images",
-      "confidence": 1.0,
-      "support": 3,
+      "object": "vision",
+      "confidence": 0.9500000000000001,
+      "support": 2,
       "inferred": false,
       "source": "seed"
     },
     {
       "subject": "jarvix",
       "relation": "opposite_of",
-      "object": "hear audio",
-      "confidence": 1.0,
-      "support": 3,
+      "object": "hearing",
+      "confidence": 0.9500000000000001,
+      "support": 2,
       "inferred": false,
       "source": "seed"
     },
     {
       "subject": "jarvix",
       "relation": "opposite_of",
-      "object": "feel emotions",
+      "object": "emotion",
       "confidence": 0.65,
       "support": 2,
       "inferred": false,
@@ -1970,9 +2095,108 @@
     {
       "subject": "jarvix",
       "relation": "opposite_of",
-      "object": "access internet",
+      "object": "internet_access",
       "confidence": 1.0,
       "support": 2,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "can",
+      "object": "read",
+      "confidence": 1.0,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "can",
+      "object": "understand text",
+      "confidence": 0.9500000000000001,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "can",
+      "object": "learn facts",
+      "confidence": 1.0,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "can",
+      "object": "remember",
+      "confidence": 1.0,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "can",
+      "object": "reason",
+      "confidence": 0.9,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "can",
+      "object": "answer questions",
+      "confidence": 0.8500000000000001,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "can",
+      "object": "make mistakes",
+      "confidence": 0.75,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "opposite_of",
+      "object": "see images",
+      "confidence": 1.0,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "opposite_of",
+      "object": "hear audio",
+      "confidence": 1.0,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "opposite_of",
+      "object": "feel emotions",
+      "confidence": 0.65,
+      "support": 1,
+      "inferred": false,
+      "source": "seed"
+    },
+    {
+      "subject": "jarvix",
+      "relation": "opposite_of",
+      "object": "access internet",
+      "confidence": 1.0,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -1981,7 +2205,7 @@
       "relation": "is_a",
       "object": "ai",
       "confidence": 1.0,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -2080,7 +2304,7 @@
       "relation": "definition",
       "object": "a label used to identify something",
       "confidence": 1.0,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -2224,7 +2448,7 @@
       "relation": "instance_of",
       "object": "color",
       "confidence": 1.0,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -2233,7 +2457,7 @@
       "relation": "instance_of",
       "object": "color",
       "confidence": 1.0,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -2242,7 +2466,7 @@
       "relation": "instance_of",
       "object": "color",
       "confidence": 1.0,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -2260,7 +2484,7 @@
       "relation": "definition",
       "object": "systematic study of the natural world",
       "confidence": 1.0,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -2287,7 +2511,7 @@
       "relation": "is_a",
       "object": "programming language",
       "confidence": 1.0,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -2304,8 +2528,8 @@
       "subject": "planet",
       "relation": "definition",
       "object": "a large body orbiting a star",
-      "confidence": 0.9500000000000001,
-      "support": 1,
+      "confidence": 1.0,
+      "support": 2,
       "inferred": false,
       "source": "seed"
     },
@@ -2314,7 +2538,7 @@
       "relation": "is_a",
       "object": "planet",
       "confidence": 1.0,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "seed"
     },
@@ -2323,7 +2547,7 @@
       "relation": "definition",
       "object": "the star at the center of our solar system",
       "confidence": 1.0,
-      "support": 1,
+      "support": 2,
       "inferred": false,
       "source": "seed"
     },
@@ -2647,7 +2871,7 @@
       "relation": "can",
       "object": "learn math",
       "confidence": 0.8,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "user"
     },
@@ -3151,7 +3375,7 @@
       "relation": "is_a",
       "object": "number",
       "confidence": 0.8,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "user"
     },
@@ -3160,7 +3384,7 @@
       "relation": "is_a",
       "object": "number",
       "confidence": 0.8,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "user"
     },
@@ -3241,7 +3465,7 @@
       "relation": "is_a",
       "object": "number",
       "confidence": 0.8500000000000001,
-      "support": 3,
+      "support": 1,
       "inferred": false,
       "source": "user"
     },
@@ -4663,7 +4887,7 @@
       "relation": "is_a",
       "object": "planet",
       "confidence": 0.8,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "user"
     },
@@ -4671,7 +4895,7 @@
       "subject": "mars",
       "relation": "is_a",
       "object": "planet",
-      "confidence": 0.75,
+      "confidence": 0.8,
       "support": 1,
       "inferred": false,
       "source": "user"
@@ -4680,7 +4904,7 @@
       "subject": "jupiter",
       "relation": "is_a",
       "object": "planet",
-      "confidence": 0.75,
+      "confidence": 0.8,
       "support": 1,
       "inferred": false,
       "source": "user"
@@ -4753,7 +4977,7 @@
       "relation": "can",
       "object": "create",
       "confidence": 0.8,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "user"
     },
@@ -4771,7 +4995,7 @@
       "relation": "has_property",
       "object": "new",
       "confidence": 0.9500000000000003,
-      "support": 7,
+      "support": 1,
       "inferred": false,
       "source": "user"
     },
@@ -4861,7 +5085,7 @@
       "relation": "can",
       "object": "dream",
       "confidence": 0.8,
-      "support": 2,
+      "support": 1,
       "inferred": false,
       "source": "user"
     },
@@ -4888,6 +5112,123 @@
       "relation": "can",
       "object": "read",
       "confidence": 0.75,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "three planets",
+      "relation": "has_property",
+      "object": "earth, mars, and jupiter",
+      "confidence": 0.65,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "you",
+      "relation": "can",
+      "object": "you math",
+      "confidence": 0.75,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "planets",
+      "relation": "has_property",
+      "object": "in space",
+      "confidence": 0.65,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "two planet",
+      "relation": "can",
+      "object": "be mars and earth",
+      "confidence": 0.75,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "two planets",
+      "relation": "can",
+      "object": "be mars and earth",
+      "confidence": 0.75,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "planet",
+      "relation": "has_property",
+      "object": "one planet",
+      "confidence": 0.65,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "two planets",
+      "relation": "has_property",
+      "object": "multiple planets",
+      "confidence": 0.65,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "multiple",
+      "relation": "has",
+      "object": "attribute many",
+      "confidence": 0.75,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "multiple",
+      "relation": "has_property",
+      "object": "many",
+      "confidence": 0.65,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "multiple",
+      "relation": "definition",
+      "object": "many",
+      "confidence": 0.85,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "many numbers",
+      "relation": "has_property",
+      "object": "more than one number",
+      "confidence": 0.65,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "eaxmple of many numbers",
+      "relation": "has_property",
+      "object": "1,2,3,4,5",
+      "confidence": 0.65,
+      "support": 1,
+      "inferred": false,
+      "source": "user"
+    },
+    {
+      "subject": "what",
+      "relation": "instance_of",
+      "object": "many numbers?",
+      "confidence": 0.8,
       "support": 1,
       "inferred": false,
       "source": "user"

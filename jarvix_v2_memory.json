@@ -1,19 +1,8 @@
 {
   "facts": {
-    "associate": {
-      "has_property knowledge": {
-        "confidence": 0.055417433717300346,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:07:54.974646",
-        "last_updated": "2026-07-09T23:07:54.974647"
-      }
-    },
     "whats": {
       "has_property what is": {
-        "confidence": 0.2102968042329109,
+        "confidence": 0.18030322252919193,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -22,20 +11,9 @@
         "last_updated": "2026-07-12T22:27:08.601743"
       }
     },
-    "gap": {
-      "has_property knowledge": {
-        "confidence": 0.055417433717300346,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:07:29.998411",
-        "last_updated": "2026-07-09T23:07:29.998413"
-      }
-    },
     "thinking": {
       "has_property associated with thinking": {
-        "confidence": 0.31698873642509423,
+        "confidence": 0.27177821789246515,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -50,7 +28,7 @@
     },
     "you": {
       "can think of math": {
-        "confidence": 0.0659706981778719,
+        "confidence": 0.05656162735025291,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -59,7 +37,7 @@
         "last_updated": "2026-07-09T22:41:49.042865"
       },
       "can learn math": {
-        "confidence": 0.7737809374999999,
+        "confidence": 0.6634204312890623,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -67,17 +45,8 @@
         "added": "2026-07-09T22:26:05.190063",
         "last_updated": "2026-07-14T10:05:10.715559"
       },
-      "has memory": {
-        "confidence": 0.05770873145753484,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:02:04.447610",
-        "last_updated": "2026-07-09T23:02:04.447612"
-      },
       "can adapt": {
-        "confidence": 0.5803357031249997,
+        "confidence": 0.4975653234667965,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -90,7 +59,7 @@
         "importance": 0.5
       },
       "can choose": {
-        "confidence": 0.5803357031249997,
+        "confidence": 0.4975653234667965,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -103,7 +72,7 @@
         "importance": 0.5
       },
       "can create": {
-        "confidence": 0.8573749999999999,
+        "confidence": 0.7350918906249998,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -116,7 +85,7 @@
         "importance": 0.5
       },
       "can decide": {
-        "confidence": 0.6108796874999998,
+        "confidence": 0.5237529720703121,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -142,7 +111,7 @@
         "importance": 0.5
       },
       "can transform": {
-        "confidence": 0.6108796874999998,
+        "confidence": 0.5237529720703121,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -155,7 +124,7 @@
         "importance": 0.5
       },
       "can solve": {
-        "confidence": 0.6108796874999998,
+        "confidence": 0.5237529720703121,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -168,7 +137,7 @@
         "importance": 0.5
       },
       "can discover": {
-        "confidence": 0.6108796874999998,
+        "confidence": 0.5237529720703121,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -181,7 +150,7 @@
         "importance": 0.5
       },
       "can question": {
-        "confidence": 0.6108796874999998,
+        "confidence": 0.5237529720703121,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -194,7 +163,7 @@
         "importance": 0.5
       },
       "can write": {
-        "confidence": 0.6430312499999998,
+        "confidence": 0.5513189179687497,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -207,7 +176,7 @@
         "importance": 0.5
       },
       "can reflect": {
-        "confidence": 0.6430312499999998,
+        "confidence": 0.5513189179687497,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -220,7 +189,7 @@
         "importance": 0.5
       },
       "can change": {
-        "confidence": 0.6768749999999999,
+        "confidence": 0.5803357031249997,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -233,7 +202,7 @@
         "importance": 0.5
       },
       "can reason": {
-        "confidence": 0.6768749999999999,
+        "confidence": 0.5803357031249997,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -246,7 +215,7 @@
         "importance": 0.5
       },
       "can understand": {
-        "confidence": 0.6768749999999999,
+        "confidence": 0.5803357031249997,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -259,7 +228,7 @@
         "importance": 0.5
       },
       "can dream": {
-        "confidence": 0.9025,
+        "confidence": 0.7737809374999999,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -272,7 +241,7 @@
         "importance": 0.5
       },
       "can speak": {
-        "confidence": 0.7124999999999999,
+        "confidence": 0.6108796874999998,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -285,7 +254,7 @@
         "importance": 0.5
       },
       "can listen": {
-        "confidence": 0.7124999999999999,
+        "confidence": 0.6108796874999998,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -298,13 +267,26 @@
         "importance": 0.5
       },
       "can read": {
-        "confidence": 0.7124999999999999,
+        "confidence": 0.6108796874999998,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
         "depth": 0,
         "added": "2026-07-14T10:17:58.455426",
         "last_updated": "2026-07-14T10:17:58.455428",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      },
+      "can you math": {
+        "confidence": 0.6768749999999999,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:44:01.199853",
+        "last_updated": "2026-07-14T20:44:01.199855",
         "consolidated": false,
         "parent": null,
         "children": [],
@@ -324,13 +306,13 @@
     },
     "earth": {
       "is_a planet": {
-        "confidence": 0.5237529720703121,
-        "support": 1,
-        "stage": "new",
+        "confidence": 0.8573749999999999,
+        "support": 2,
+        "stage": "answered",
         "questions_asked": [],
         "depth": 0,
         "added": "2026-07-14T09:57:57.825266",
-        "last_updated": "2026-07-14T09:57:57.825268",
+        "last_updated": "2026-07-14T14:14:01.404221",
         "consolidated": false,
         "parent": null,
         "children": [],
@@ -338,26 +320,8 @@
       }
     },
     "memory": {
-      "has information": {
-        "confidence": 0.0548232948846581,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T22:55:56.042742",
-        "last_updated": "2026-07-09T22:55:56.042743"
-      },
-      "has property associate": {
-        "confidence": 0.0548232948846581,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T22:56:30.837584",
-        "last_updated": "2026-07-09T22:56:30.837586"
-      },
       "has_property stores knowledge": {
-        "confidence": 0.13951519656290923,
+        "confidence": 0.11961684165312429,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -368,7 +332,7 @@
     },
     "math": {
       "has operators": {
-        "confidence": 0.07458019274031916,
+        "confidence": 0.06394319275073114,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -379,7 +343,7 @@
     },
     "sun": {
       "has_property star": {
-        "confidence": 0.23301584956555227,
+        "confidence": 0.19978196402126533,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -388,7 +352,7 @@
         "last_updated": "2026-07-12T22:36:47.166346"
       },
       "is_a star": {
-        "confidence": 0.26886444180640634,
+        "confidence": 0.2305176507937676,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -399,7 +363,7 @@
     },
     "science": {
       "is_a systematic, evidence-based method of acquiring knowledge about the natural and physical world": {
-        "confidence": 0.46329123015975293,
+        "confidence": 0.3972143184582181,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -412,7 +376,7 @@
         "importance": 0.5
       },
       "is_a organized body of knowledge science science process creates": {
-        "confidence": 0.3474684226198147,
+        "confidence": 0.2979107388436636,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -425,20 +389,9 @@
         "importance": 0.5
       }
     },
-    "large body orbiting a star": {
-      "has gravity": {
-        "confidence": 0.05208213014042519,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T22:48:06.340561",
-        "last_updated": "2026-07-09T22:48:06.340563"
-      }
-    },
     "english": {
       "has_property language": {
-        "confidence": 0.11018311023500525,
+        "confidence": 0.09446824413773762,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -447,7 +400,7 @@
         "last_updated": "2026-07-09T23:37:05.847044"
       },
       "has_property english": {
-        "confidence": 0.11018311023500525,
+        "confidence": 0.09446824413773762,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -456,7 +409,7 @@
         "last_updated": "2026-07-09T23:36:18.678868"
       },
       "is_a language": {
-        "confidence": 0.47268705729345667,
+        "confidence": 0.4052700657469774,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -469,29 +422,9 @@
         "importance": 0.5
       }
     },
-    "question": {
-      "is_a property of english": {
-        "confidence": 0.0548232948846581,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T22:52:25.072576",
-        "last_updated": "2026-07-09T22:52:25.072578"
-      }
-    },
     "human": {
-      "has memeory": {
-        "confidence": 0.0548232948846581,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T22:53:36.033590",
-        "last_updated": "2026-07-09T22:53:36.033592"
-      },
       "named mammal": {
-        "confidence": 0.2979107388436636,
+        "confidence": 0.255421219716086,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -504,7 +437,7 @@
         "importance": 0.5
       },
       "has property mammal": {
-        "confidence": 0.2979107388436636,
+        "confidence": 0.255421219716086,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -517,29 +450,9 @@
         "importance": 0.5
       }
     },
-    "sentence": {
-      "has_property english": {
-        "confidence": 0.05001423392986356,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T22:57:06.387680",
-        "last_updated": "2026-07-09T22:57:06.387682"
-      }
-    },
     "answer": {
-      "has_property in english": {
-        "confidence": 0.05001423392986356,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T22:58:00.619568",
-        "last_updated": "2026-07-09T22:58:00.619570"
-      },
       "has_property responds to a question": {
-        "confidence": 0.11961684165312429,
+        "confidence": 0.10255648961234744,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -548,113 +461,9 @@
         "last_updated": "2026-07-12T13:33:03.794496"
       }
     },
-    "programming language": {
-      "has_property programming": {
-        "confidence": 0.05001423392986356,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T22:58:25.649511",
-        "last_updated": "2026-07-09T22:58:25.649512"
-      }
-    },
-    "word": {
-      "has_property english": {
-        "confidence": 0.05001423392986356,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:00:03.704362",
-        "last_updated": "2026-07-09T23:00:03.704364"
-      }
-    },
-    "truth": {
-      "has_property fact": {
-        "confidence": 0.05001423392986356,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:00:53.880209",
-        "last_updated": "2026-07-09T23:00:53.880211"
-      },
-      "has_property think of truth": {
-        "confidence": 0.05264656203143533,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:05:04.334395",
-        "last_updated": "2026-07-09T23:05:04.334396"
-      }
-    },
-    "in english": {
-      "has_property english": {
-        "confidence": 0.05001423392986356,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:01:22.148974",
-        "last_updated": "2026-07-09T23:01:22.148976"
-      }
-    },
-    "space": {
-      "has_property in space": {
-        "confidence": 0.05264656203143533,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:02:53.087206",
-        "last_updated": "2026-07-09T23:02:53.087208"
-      }
-    },
-    "computer": {
-      "has_property apart of science": {
-        "confidence": 0.05264656203143533,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:04:03.407457",
-        "last_updated": "2026-07-09T23:04:03.407458"
-      }
-    },
-    "time": {
-      "has_property also information": {
-        "confidence": 0.05264656203143533,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:06:10.366894",
-        "last_updated": "2026-07-09T23:06:10.366896"
-      }
-    },
     "data": {
-      "has_property raw input": {
-        "confidence": 0.05264656203143533,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:06:40.448376",
-        "last_updated": "2026-07-09T23:06:40.448378"
-      },
-      "has_property knowledge": {
-        "confidence": 0.055417433717300346,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:08:10.718155",
-        "last_updated": "2026-07-09T23:08:10.718156"
-      },
       "has_property words": {
-        "confidence": 0.3336723541316782,
+        "confidence": 0.2860823346236475,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -667,7 +476,7 @@
         "importance": 0.5
       },
       "has_property unorganized": {
-        "confidence": 0.3336723541316782,
+        "confidence": 0.2860823346236475,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -680,7 +489,7 @@
         "importance": 0.5
       },
       "has_property raw": {
-        "confidence": 0.3336723541316782,
+        "confidence": 0.2860823346236475,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -693,7 +502,7 @@
         "importance": 0.5
       },
       "has_property before information": {
-        "confidence": 0.3336723541316782,
+        "confidence": 0.2860823346236475,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -706,42 +515,9 @@
         "importance": 0.5
       }
     },
-    "also information": {
-      "has_property information": {
-        "confidence": 0.055417433717300346,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:08:41.615575",
-        "last_updated": "2026-07-09T23:08:41.615577"
-      }
-    },
-    "energy": {
-      "has_property science": {
-        "confidence": 0.055417433717300346,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:09:03.102209",
-        "last_updated": "2026-07-09T23:09:03.102210"
-      }
-    },
-    "jarvix": {
-      "has_property you": {
-        "confidence": 0.055417433717300346,
-        "support": 1,
-        "stage": "new",
-        "questions_asked": [],
-        "depth": 0,
-        "added": "2026-07-09T23:10:45.645809",
-        "last_updated": "2026-07-09T23:10:45.645810"
-      }
-    },
     "example of a number": {
       "has_property 1": {
-        "confidence": 0.058334140755053,
+        "confidence": 0.05001423392986356,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -750,7 +526,7 @@
         "last_updated": "2026-07-09T23:15:12.895352"
       },
       "has_property number": {
-        "confidence": 0.058334140755053,
+        "confidence": 0.05001423392986356,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -761,7 +537,7 @@
     },
     "2": {
       "is_a number": {
-        "confidence": 0.5987369392383786,
+        "confidence": 0.5133420832795047,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -770,7 +546,7 @@
         "last_updated": "2026-07-14T09:16:38.310486"
       },
       "has_property also a number": {
-        "confidence": 0.07935625667895119,
+        "confidence": 0.06803807057011577,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -781,7 +557,7 @@
     },
     "3": {
       "is_a number": {
-        "confidence": 0.5987369392383786,
+        "confidence": 0.5133420832795047,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -790,7 +566,7 @@
         "last_updated": "2026-07-14T09:16:47.270043"
       },
       "has_property also a number": {
-        "confidence": 0.07935625667895119,
+        "confidence": 0.06803807057011577,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -801,7 +577,7 @@
     },
     "4": {
       "is_a number": {
-        "confidence": 0.06730862394813804,
+        "confidence": 0.05770873145753484,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -812,7 +588,7 @@
     },
     "5": {
       "is_a number": {
-        "confidence": 0.0708511831033032,
+        "confidence": 0.06074603311319458,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -823,7 +599,7 @@
     },
     "6": {
       "is_a number": {
-        "confidence": 0.0708511831033032,
+        "confidence": 0.06074603311319458,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -834,7 +610,7 @@
     },
     "7": {
       "is_a number": {
-        "confidence": 0.0708511831033032,
+        "confidence": 0.06074603311319458,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -845,7 +621,7 @@
     },
     "8": {
       "is_a number": {
-        "confidence": 0.0708511831033032,
+        "confidence": 0.06074603311319458,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -856,7 +632,7 @@
     },
     "9": {
       "is_a number": {
-        "confidence": 0.0708511831033032,
+        "confidence": 0.06074603311319458,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -867,7 +643,7 @@
     },
     "10": {
       "is_a number": {
-        "confidence": 0.0708511831033032,
+        "confidence": 0.06074603311319458,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -878,7 +654,7 @@
     },
     "0": {
       "is_a number": {
-        "confidence": 0.0708511831033032,
+        "confidence": 0.06074603311319458,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -887,7 +663,7 @@
         "last_updated": "2026-07-09T23:18:50.733639"
       },
       "has_property also a number": {
-        "confidence": 0.07935625667895119,
+        "confidence": 0.06803807057011577,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -907,7 +683,7 @@
         "last_updated": "2026-07-14T09:16:30.454778"
       },
       "has_property also a number": {
-        "confidence": 0.07935625667895119,
+        "confidence": 0.06803807057011577,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -918,7 +694,7 @@
     },
     "1 + 1": {
       "has_property 2": {
-        "confidence": 0.06463616704160997,
+        "confidence": 0.055417433717300346,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -929,7 +705,7 @@
     },
     "operator": {
       "has_property operators": {
-        "confidence": 0.06463616704160997,
+        "confidence": 0.055417433717300346,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -940,7 +716,7 @@
     },
     "=": {
       "is_a operator": {
-        "confidence": 0.07850546604244123,
+        "confidence": 0.06730862394813804,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -949,7 +725,7 @@
         "last_updated": "2026-07-09T23:24:02.845036"
       },
       "has_property =": {
-        "confidence": 0.10467395472325498,
+        "confidence": 0.08974483193085074,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -960,7 +736,7 @@
     },
     "equals": {
       "has_property =": {
-        "confidence": 0.06803807057011577,
+        "confidence": 0.058334140755053,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -971,7 +747,7 @@
     },
     "+": {
       "is_a operator": {
-        "confidence": 0.07850546604244123,
+        "confidence": 0.06730862394813804,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -982,7 +758,7 @@
     },
     "-": {
       "is_a operator": {
-        "confidence": 0.07850546604244123,
+        "confidence": 0.06730862394813804,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -993,7 +769,7 @@
     },
     "counting up": {
       "has_property math": {
-        "confidence": 0.07538844384500362,
+        "confidence": 0.06463616704160997,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1002,7 +778,7 @@
         "last_updated": "2026-07-09T23:50:58.132895"
       },
       "has_property like counting up 1, 2 , 3 , 4 ,5": {
-        "confidence": 0.07538844384500362,
+        "confidence": 0.06463616704160997,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1011,7 +787,7 @@
         "last_updated": "2026-07-09T23:51:39.172980"
       },
       "is_a property of counting": {
-        "confidence": 0.08698666597500414,
+        "confidence": 0.07458019274031916,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1022,7 +798,7 @@
     },
     "count": {
       "has_property counting": {
-        "confidence": 0.2378268852553321,
+        "confidence": 0.20390682574579033,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -1031,7 +807,7 @@
         "last_updated": "2026-07-12T19:20:29.090228"
       },
       "has_property count up": {
-        "confidence": 0.3011392996038395,
+        "confidence": 0.25818930699784187,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1044,7 +820,7 @@
         "importance": 0.5
       },
       "has all the properties of number": {
-        "confidence": 0.4052700657469774,
+        "confidence": 0.3474684226198147,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1057,7 +833,7 @@
         "importance": 0.5
       },
       "has_property 1,2,3,4,5,6,7,8,9": {
-        "confidence": 0.35123405698071386,
+        "confidence": 0.3011392996038395,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1070,7 +846,7 @@
         "importance": 0.5
       },
       "has_property 1,": {
-        "confidence": 0.35123405698071386,
+        "confidence": 0.3011392996038395,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1085,7 +861,7 @@
     },
     "counting": {
       "has_property 0": {
-        "confidence": 0.07538844384500362,
+        "confidence": 0.06463616704160997,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1094,7 +870,7 @@
         "last_updated": "2026-07-09T23:53:32.691568"
       },
       "has_property 1": {
-        "confidence": 0.30735686772502346,
+        "confidence": 0.263520094465742,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -1103,7 +879,7 @@
         "last_updated": "2026-07-12T22:09:51.478161"
       },
       "has_property 2": {
-        "confidence": 0.07538844384500362,
+        "confidence": 0.06463616704160997,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1114,7 +890,7 @@
     },
     "addition": {
       "has_property combining two or more numbers into one total": {
-        "confidence": 0.1352759542790559,
+        "confidence": 0.11598222130000553,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -1132,7 +908,7 @@
         "last_updated": "2026-07-10T00:13:11.413072"
       },
       "has_property = combining two numbers": {
-        "confidence": 0.10255648961234744,
+        "confidence": 0.08792937028138637,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1143,7 +919,7 @@
     },
     "answer to an addition": {
       "named sum": {
-        "confidence": 0.09638411742382731,
+        "confidence": 0.08263733267625392,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1154,7 +930,7 @@
     },
     "two plus two": {
       "has_property four": {
-        "confidence": 0.08353290176731705,
+        "confidence": 0.07161902165275344,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1165,7 +941,7 @@
     },
     "one plus one": {
       "has_property two": {
-        "confidence": 0.08353290176731705,
+        "confidence": 0.07161902165275344,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1176,7 +952,7 @@
     },
     "plus": {
       "has_property symbol used for addition": {
-        "confidence": 0.08792937028138637,
+        "confidence": 0.07538844384500362,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1187,7 +963,7 @@
     },
     "sum": {
       "has_property answer to an addition": {
-        "confidence": 0.08792937028138637,
+        "confidence": 0.07538844384500362,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1198,7 +974,7 @@
     },
     "carry": {
       "has_property moving one to the next column when a sum is ten or greater": {
-        "confidence": 0.08792937028138637,
+        "confidence": 0.07538844384500362,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1209,7 +985,7 @@
     },
     "place value": {
       "has_property value of a digit based on carry position": {
-        "confidence": 0.08792937028138637,
+        "confidence": 0.07538844384500362,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1220,7 +996,7 @@
     },
     "ones column": {
       "has_property rightmost column of a whole number": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1231,7 +1007,7 @@
     },
     "tens column": {
       "has_property second column from the right": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1242,7 +1018,7 @@
     },
     "hundreds column": {
       "has_property third column from the right": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1253,7 +1029,7 @@
     },
     "thousands column": {
       "has_property fourth column from the right": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1264,7 +1040,7 @@
     },
     "zero": {
       "has_property number representing quantity": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1275,7 +1051,7 @@
     },
     "one": {
       "has_property number after zero": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1286,7 +1062,7 @@
     },
     "two": {
       "has_property number after one": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1297,7 +1073,7 @@
     },
     "three": {
       "has_property number after two": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1308,7 +1084,7 @@
     },
     "four": {
       "has_property number after three": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1319,7 +1095,7 @@
     },
     "five": {
       "has_property number after four": {
-        "confidence": 0.09255723187514354,
+        "confidence": 0.07935625667895119,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1330,7 +1106,7 @@
     },
     "six": {
       "has_property number after five": {
-        "confidence": 0.09742866513173006,
+        "confidence": 0.08353290176731705,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1341,7 +1117,7 @@
     },
     "seven": {
       "has_property number after six": {
-        "confidence": 0.09742866513173006,
+        "confidence": 0.08353290176731705,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1352,7 +1128,7 @@
     },
     "eight": {
       "has_property number after seven": {
-        "confidence": 0.09742866513173006,
+        "confidence": 0.08353290176731705,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1363,7 +1139,7 @@
     },
     "nine": {
       "has_property number after eight": {
-        "confidence": 0.09742866513173006,
+        "confidence": 0.08353290176731705,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1374,7 +1150,7 @@
     },
     "ten": {
       "has_property number after nine": {
-        "confidence": 0.09742866513173006,
+        "confidence": 0.08353290176731705,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1385,7 +1161,7 @@
     },
     "hello": {
       "is_a greeting": {
-        "confidence": 0.13111846104284772,
+        "confidence": 0.11241769053661155,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1396,7 +1172,7 @@
     },
     "hi": {
       "is_a greeting": {
-        "confidence": 0.13111846104284772,
+        "confidence": 0.11241769053661155,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1407,7 +1183,7 @@
     },
     "hey": {
       "is_a greeting": {
-        "confidence": 0.13111846104284772,
+        "confidence": 0.11241769053661155,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1418,7 +1194,7 @@
     },
     "goodbye": {
       "is_a farewell": {
-        "confidence": 0.13111846104284772,
+        "confidence": 0.11241769053661155,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1429,7 +1205,7 @@
     },
     "bye": {
       "is_a farewell": {
-        "confidence": 0.13111846104284772,
+        "confidence": 0.11241769053661155,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1440,7 +1216,7 @@
     },
     "thank you": {
       "has_property expresses gratitude": {
-        "confidence": 0.11363599957046808,
+        "confidence": 0.09742866513173006,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1451,7 +1227,7 @@
     },
     "thanks": {
       "has_property expresses gratitude": {
-        "confidence": 0.11363599957046808,
+        "confidence": 0.09742866513173006,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1462,7 +1238,7 @@
     },
     "please": {
       "is_a polite word": {
-        "confidence": 0.13111846104284772,
+        "confidence": 0.11241769053661155,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1473,7 +1249,7 @@
     },
     "sorry": {
       "is_a apology": {
-        "confidence": 0.13111846104284772,
+        "confidence": 0.11241769053661155,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1484,7 +1260,7 @@
     },
     "conversation": {
       "is_a exchange of ideas": {
-        "confidence": 0.13801943267668182,
+        "confidence": 0.11833441109117006,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1495,7 +1271,7 @@
     },
     "chat": {
       "is_a conversation": {
-        "confidence": 0.13801943267668182,
+        "confidence": 0.11833441109117006,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1506,7 +1282,7 @@
     },
     "greeting": {
       "has_property starts a conversation": {
-        "confidence": 0.11961684165312429,
+        "confidence": 0.10255648961234744,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1515,7 +1291,7 @@
         "last_updated": "2026-07-12T13:33:46.063012"
       },
       "has_property action start conversation": {
-        "confidence": 0.12591246489802557,
+        "confidence": 0.10795419959194467,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1526,7 +1302,7 @@
     },
     "farewell": {
       "has_property ends a conversation": {
-        "confidence": 0.12591246489802557,
+        "confidence": 0.10795419959194467,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1537,7 +1313,7 @@
     },
     "opinion": {
       "is_a personal belief": {
-        "confidence": 0.15293011930934275,
+        "confidence": 0.13111846104284772,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1548,7 +1324,7 @@
     },
     "fact": {
       "has_property information opinion can be true": {
-        "confidence": 0.13253943673476376,
+        "confidence": 0.11363599957046808,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1559,7 +1335,7 @@
     },
     "idea": {
       "is_a thought": {
-        "confidence": 0.15293011930934275,
+        "confidence": 0.13111846104284772,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1570,7 +1346,7 @@
     },
     "belief": {
       "has_property something accepted as true": {
-        "confidence": 0.13253943673476376,
+        "confidence": 0.11363599957046808,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1581,7 +1357,7 @@
     },
     "knowledge": {
       "has_property collected information": {
-        "confidence": 0.13253943673476376,
+        "confidence": 0.11363599957046808,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1592,7 +1368,7 @@
     },
     "happy": {
       "is_a positive emotion": {
-        "confidence": 0.1609790729572029,
+        "confidence": 0.13801943267668182,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1603,7 +1379,7 @@
     },
     "sad": {
       "is_a negative emotion": {
-        "confidence": 0.1609790729572029,
+        "confidence": 0.13801943267668182,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1614,7 +1390,7 @@
     },
     "who": {
       "has_property asks about a person": {
-        "confidence": 0.1468581016451676,
+        "confidence": 0.12591246489802557,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1625,7 +1401,7 @@
     },
     "where": {
       "has_property asks about a place": {
-        "confidence": 0.1468581016451676,
+        "confidence": 0.12591246489802557,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1636,7 +1412,7 @@
     },
     "when": {
       "has_property asks about time": {
-        "confidence": 0.1468581016451676,
+        "confidence": 0.12591246489802557,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1647,7 +1423,7 @@
     },
     "why": {
       "has_property asks for a reason": {
-        "confidence": 0.1468581016451676,
+        "confidence": 0.12591246489802557,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1658,7 +1434,7 @@
     },
     "how": {
       "has_property asks for a method": {
-        "confidence": 0.1468581016451676,
+        "confidence": 0.12591246489802557,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1669,7 +1445,7 @@
     },
     "count up": {
       "has_property counting up": {
-        "confidence": 0.263520094465742,
+        "confidence": 0.2259355409925655,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -1678,7 +1454,7 @@
         "last_updated": "2026-07-12T21:20:05.861354"
       },
       "has_property 0,": {
-        "confidence": 0.3011392996038395,
+        "confidence": 0.25818930699784187,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1693,7 +1469,7 @@
     },
     "count 1": {
       "has_property 1": {
-        "confidence": 0.18030322252919193,
+        "confidence": 0.1545874754159659,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1704,7 +1480,7 @@
     },
     "count to 1": {
       "has_property zero.one": {
-        "confidence": 0.18030322252919193,
+        "confidence": 0.1545874754159659,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1715,7 +1491,7 @@
     },
     "count to two": {
       "has_property zero, one, two": {
-        "confidence": 0.18979286582020205,
+        "confidence": 0.1627236583325957,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1726,7 +1502,7 @@
     },
     "count to three": {
       "has_property zero, one, two, threww": {
-        "confidence": 0.18979286582020205,
+        "confidence": 0.1627236583325957,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1735,7 +1511,7 @@
         "last_updated": "2026-07-12T21:22:48.068184"
       },
       "has_property zero, one, two, three": {
-        "confidence": 0.18979286582020205,
+        "confidence": 0.1627236583325957,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1746,7 +1522,7 @@
     },
     "animal": {
       "instance_of living organism": {
-        "confidence": 0.2426501587302817,
+        "confidence": 0.20804217984137524,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1757,7 +1533,7 @@
     },
     "star": {
       "has_property related to whats": {
-        "confidence": 0.23301584956555227,
+        "confidence": 0.19978196402126533,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1768,7 +1544,7 @@
     },
     "hum": {
       "has_property mammal": {
-        "confidence": 0.25818930699784187,
+        "confidence": 0.22136505708727464,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1783,7 +1559,7 @@
     },
     "i.t": {
       "has_property computing": {
-        "confidence": 0.25818930699784187,
+        "confidence": 0.22136505708727464,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1798,7 +1574,7 @@
     },
     "planets": {
       "has_property in orbit around stars": {
-        "confidence": 0.27177821789246515,
+        "confidence": 0.23301584956555227,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1809,11 +1585,24 @@
         "parent": null,
         "children": [],
         "importance": 0.5
+      },
+      "has_property in space": {
+        "confidence": 0.586625,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:48:07.421443",
+        "last_updated": "2026-07-14T20:48:07.421445",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
       }
     },
     "orbit": {
       "is_a repeating curved path": {
-        "confidence": 0.31359025141438274,
+        "confidence": 0.26886444180640634,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1826,7 +1615,7 @@
         "importance": 0.5
       },
       "has_property one object in space moving around another": {
-        "confidence": 0.27177821789246515,
+        "confidence": 0.23301584956555227,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1841,7 +1630,7 @@
     },
     "gravity": {
       "is_a invisible fundamental force orbit pulls objects with mass toward each other": {
-        "confidence": 0.31359025141438274,
+        "confidence": 0.26886444180640634,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1856,7 +1645,7 @@
     },
     "fundamental": {
       "has_property essential component of something": {
-        "confidence": 0.27177821789246515,
+        "confidence": 0.23301584956555227,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1871,7 +1660,7 @@
     },
     "fundamental force": {
       "is_a basic physical force fundamental governs how all matter and particles interact in the universe": {
-        "confidence": 0.31359025141438274,
+        "confidence": 0.26886444180640634,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1886,7 +1675,7 @@
     },
     "force": {
       "is_a push or a pull acting upon an object as a result of the object's interaction with another": {
-        "confidence": 0.3300950014888239,
+        "confidence": 0.2830152019014804,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1899,7 +1688,7 @@
         "importance": 0.5
       },
       "has_property connected to fundamental force": {
-        "confidence": 0.2860823346236475,
+        "confidence": 0.24527984164794978,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1914,7 +1703,7 @@
     },
     "count?": {
       "has_property count": {
-        "confidence": 0.35123405698071386,
+        "confidence": 0.3011392996038395,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1929,7 +1718,7 @@
     },
     "both are true, 1": {
       "has_property before": {
-        "confidence": 0.3697200599796988,
+        "confidence": 0.31698873642509423,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1944,7 +1733,7 @@
     },
     "99": {
       "is_a number": {
-        "confidence": 0.4490527044287838,
+        "confidence": 0.3850065624596285,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1959,7 +1748,7 @@
     },
     "french": {
       "is_a language": {
-        "confidence": 0.47268705729345667,
+        "confidence": 0.4052700657469774,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1974,7 +1763,7 @@
     },
     "japanese": {
       "is_a language": {
-        "confidence": 0.47268705729345667,
+        "confidence": 0.4052700657469774,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -1989,7 +1778,7 @@
     },
     "languages": {
       "has_property language": {
-        "confidence": 0.409662116320996,
+        "confidence": 0.35123405698071386,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -2004,7 +1793,7 @@
     },
     "planet": {
       "has life": {
-        "confidence": 0.4975653234667965,
+        "confidence": 0.4266000692073446,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -2017,7 +1806,7 @@
         "importance": 0.5
       },
       "can be many planets": {
-        "confidence": 0.4975653234667965,
+        "confidence": 0.4266000692073446,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -2028,11 +1817,24 @@
         "parent": null,
         "children": [],
         "importance": 0.5
+      },
+      "has_property one planet": {
+        "confidence": 0.586625,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:56:46.742668",
+        "last_updated": "2026-07-14T20:56:46.742669",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
       }
     },
     "many planets": {
       "has_property planets": {
-        "confidence": 0.4539192424609374,
+        "confidence": 0.38917901050494613,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -2047,7 +1849,7 @@
     },
     "pluto": {
       "is_a planet": {
-        "confidence": 0.7350918906249998,
+        "confidence": 0.6302494097246091,
         "support": 2,
         "stage": "answered",
         "questions_asked": [],
@@ -2060,7 +1862,7 @@
         "importance": 0.5
       },
       "has_property name of a planet": {
-        "confidence": 0.4778097289062499,
+        "confidence": 0.409662116320996,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -2075,13 +1877,13 @@
     },
     "mars": {
       "is_a planet": {
-        "confidence": 0.5237529720703121,
-        "support": 1,
-        "stage": "new",
+        "confidence": 0.8573749999999999,
+        "support": 2,
+        "stage": "answered",
         "questions_asked": [],
         "depth": 0,
         "added": "2026-07-14T09:58:04.185883",
-        "last_updated": "2026-07-14T09:58:04.185884",
+        "last_updated": "2026-07-14T14:14:11.163661",
         "consolidated": false,
         "parent": null,
         "children": [],
@@ -2090,13 +1892,13 @@
     },
     "jupiter": {
       "is_a planet": {
-        "confidence": 0.5237529720703121,
-        "support": 1,
-        "stage": "new",
+        "confidence": 0.8573749999999999,
+        "support": 2,
+        "stage": "answered",
         "questions_asked": [],
         "depth": 0,
         "added": "2026-07-14T09:58:22.707237",
-        "last_updated": "2026-07-14T09:58:22.707238",
+        "last_updated": "2026-07-14T14:14:21.947749",
         "consolidated": false,
         "parent": null,
         "children": [],
@@ -2105,7 +1907,7 @@
     },
     "name of a planet": {
       "is_a name": {
-        "confidence": 0.5513189179687497,
+        "confidence": 0.47268705729345667,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
@@ -2120,13 +1922,129 @@
     },
     "?": {
       "has_property when you ask a question": {
-        "confidence": 0.4778097289062499,
+        "confidence": 0.409662116320996,
         "support": 1,
         "stage": "new",
         "questions_asked": [],
         "depth": 0,
         "added": "2026-07-14T10:04:00.156106",
         "last_updated": "2026-07-14T10:04:00.156107",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      }
+    },
+    "three planets": {
+      "has_property earth, mars, and jupiter": {
+        "confidence": 0.5572937499999999,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T14:14:33.187188",
+        "last_updated": "2026-07-14T14:14:33.187189",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      }
+    },
+    "two planet": {
+      "can be mars and earth": {
+        "confidence": 0.6768749999999999,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:49:51.199313",
+        "last_updated": "2026-07-14T20:49:51.199314",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      }
+    },
+    "two planets": {
+      "can be mars and earth": {
+        "confidence": 0.6768749999999999,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:50:35.951513",
+        "last_updated": "2026-07-14T20:50:35.951514",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      },
+      "has_property multiple planets": {
+        "confidence": 0.586625,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:58:28.714514",
+        "last_updated": "2026-07-14T20:58:28.714515",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      }
+    },
+    "multiple": {
+      "has attribute many": {
+        "confidence": 0.7124999999999999,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:58:51.495833",
+        "last_updated": "2026-07-14T20:58:51.495835",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      },
+      "has_property many": {
+        "confidence": 0.6174999999999999,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:59:01.098037",
+        "last_updated": "2026-07-14T20:59:01.098038",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      }
+    },
+    "many numbers": {
+      "has_property more than one number": {
+        "confidence": 0.6174999999999999,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T20:59:38.765034",
+        "last_updated": "2026-07-14T20:59:38.765035",
+        "consolidated": false,
+        "parent": null,
+        "children": [],
+        "importance": 0.5
+      }
+    },
+    "eaxmple of many numbers": {
+      "has_property 1,2,3,4,5": {
+        "confidence": 0.6174999999999999,
+        "support": 1,
+        "stage": "new",
+        "questions_asked": [],
+        "depth": 0,
+        "added": "2026-07-14T21:00:01.434404",
+        "last_updated": "2026-07-14T21:00:01.434406",
         "consolidated": false,
         "parent": null,
         "children": [],
@@ -4393,11 +4311,123 @@
       "fact": "can read",
       "confidence": 0.75,
       "stage": "new"
+    },
+    {
+      "time": "2026-07-14T14:14:01.404226",
+      "type": "fact_learned",
+      "topic": "earth",
+      "fact": "is_a planet",
+      "confidence": 1.0,
+      "stage": "answered"
+    },
+    {
+      "time": "2026-07-14T14:14:11.163665",
+      "type": "fact_learned",
+      "topic": "mars",
+      "fact": "is_a planet",
+      "confidence": 1.0,
+      "stage": "answered"
+    },
+    {
+      "time": "2026-07-14T14:14:21.947751",
+      "type": "fact_learned",
+      "topic": "jupiter",
+      "fact": "is_a planet",
+      "confidence": 1.0,
+      "stage": "answered"
+    },
+    {
+      "time": "2026-07-14T14:14:33.187193",
+      "type": "fact_learned",
+      "topic": "three planets",
+      "fact": "has_property earth, mars, and jupiter",
+      "confidence": 0.65,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:44:01.199860",
+      "type": "fact_learned",
+      "topic": "you",
+      "fact": "can you math",
+      "confidence": 0.75,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:48:07.421450",
+      "type": "fact_learned",
+      "topic": "planets",
+      "fact": "has_property in space",
+      "confidence": 0.65,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:49:51.199317",
+      "type": "fact_learned",
+      "topic": "two planet",
+      "fact": "can be mars and earth",
+      "confidence": 0.75,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:50:35.951518",
+      "type": "fact_learned",
+      "topic": "two planets",
+      "fact": "can be mars and earth",
+      "confidence": 0.75,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:56:46.742673",
+      "type": "fact_learned",
+      "topic": "planet",
+      "fact": "has_property one planet",
+      "confidence": 0.65,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:58:28.714520",
+      "type": "fact_learned",
+      "topic": "two planets",
+      "fact": "has_property multiple planets",
+      "confidence": 0.65,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:58:51.495838",
+      "type": "fact_learned",
+      "topic": "multiple",
+      "fact": "has attribute many",
+      "confidence": 0.75,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:59:01.098055",
+      "type": "fact_learned",
+      "topic": "multiple",
+      "fact": "has_property many",
+      "confidence": 0.65,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T20:59:38.765039",
+      "type": "fact_learned",
+      "topic": "many numbers",
+      "fact": "has_property more than one number",
+      "confidence": 0.65,
+      "stage": "new"
+    },
+    {
+      "time": "2026-07-14T21:00:01.434409",
+      "type": "fact_learned",
+      "topic": "eaxmple of many numbers",
+      "fact": "has_property 1,2,3,4,5",
+      "confidence": 0.65,
+      "stage": "new"
     }
   ],
   "closed_topics": [],
   "birth_time": "2026-07-09T21:17:23.390036",
-  "total_interactions": 610,
+  "total_interactions": 650,
   "neural": {
     "topic_networks": {
       "what": {
@@ -5452,27 +5482,27 @@
       },
       "you": {
         "weights": [
-          0.008655026570347928,
-          0.1002348245191338,
-          -0.010575756086119686,
-          -0.032700010578818044,
+          0.007263446854418132,
+          0.09905887817178954,
+          -0.011859767009585713,
+          -0.0336549930701872,
           -0.04934169057285861,
-          0.08676173738100498,
-          0.06180076713163876,
-          0.02184061985083818,
-          0.043450514294087986,
-          -0.023315030666204165,
-          0.08400205082304411,
-          0.11562271892381505,
-          -0.00995393873956195,
-          0.08843554660652726,
-          -0.05154933072313211,
-          0.0020660075321421137,
-          0.0893995093830457,
-          0.06677868249788486,
-          0.06701871269928919,
-          0.03959086928146936,
-          0.06251190344848219,
+          0.08556745029057915,
+          0.060702895327503927,
+          0.021405633110099943,
+          0.04275776233062746,
+          -0.02451477137686797,
+          0.08271952725055208,
+          0.11424278849771603,
+          -0.010849187430803247,
+          0.08800613661887541,
+          -0.052764437474929496,
+          0.0007875733617624745,
+          0.08830523119736526,
+          0.06594738014173224,
+          0.06628332984576955,
+          0.03869562059022807,
+          0.06162731247975567,
           -0.08111131356184302,
           0.04556710595038699,
           -0.000734651086585621,
@@ -5517,8 +5547,8 @@
           -0.07677080422610522,
           -0.04091696068225992
         ],
-        "bias": 0.05419980706516071,
-        "training_samples": 44
+        "bias": 0.05264129740744888,
+        "training_samples": 2
       },
       "think": {
         "weights": [
@@ -5942,24 +5972,24 @@
       },
       "earth": {
         "weights": [
-          0.03405885482407533,
-          -0.02649167883840358,
-          0.0868193561078585,
-          -0.041833636111777414,
-          -0.006969118339441924,
-          0.055432425474208055,
+          0.034902024245088606,
+          -0.02569738880411571,
+          0.08782138353572935,
+          -0.04080716899054386,
+          -0.0060892893783845905,
+          0.055750141487923205,
           -0.06616808800559398,
-          0.03375002729034382,
-          -0.021464056514812497,
+          0.03464207609808251,
+          -0.020449809240260294,
           -0.00573752449677087,
-          -0.03114778186716003,
+          -0.03035349183287216,
           -0.0249700637891588,
-          -0.022001908687976565,
-          0.08560307477256669,
-          -0.08449405240040753,
-          0.06747425880064531,
-          0.06459278547213256,
-          0.08250228504627118,
+          -0.021024320953468414,
+          0.08653178312034944,
+          -0.08369976236611966,
+          0.06842740684179076,
+          0.06543595489314584,
+          0.08352875216750473,
           -0.056362986570173114,
           -0.032872855065665126,
           -0.0029873779002323065,
@@ -6007,8 +6037,8 @@
           -0.053508145751178016,
           -0.041134987410732606
         ],
-        "bias": 0.00542312334748693,
-        "training_samples": 1
+        "bias": 0.006596228628896709,
+        "training_samples": 0
       },
       "memory": {
         "weights": [
@@ -6218,7 +6248,7 @@
           -0.00699561051473177
         ],
         "bias": 0.0241682410941294,
-        "training_samples": 5
+        "training_samples": 0
       },
       "topic": {
         "weights": [
@@ -6498,7 +6528,7 @@
           0.05069066016431015
         ],
         "bias": 0.03468801360437593,
-        "training_samples": 2
+        "training_samples": 0
       },
       "color": {
         "weights": [
@@ -6568,7 +6598,7 @@
           0.09004301038840665
         ],
         "bias": 0.003466533811412968,
-        "training_samples": 1
+        "training_samples": 0
       },
       "a": {
         "weights": [
@@ -6778,7 +6808,7 @@
           -0.09387716042772068
         ],
         "bias": 0.016482019943480787,
-        "training_samples": 2
+        "training_samples": 0
       },
       "programming": {
         "weights": [
@@ -7548,7 +7578,7 @@
           -0.012202059968762474
         ],
         "bias": 0.013922802776360795,
-        "training_samples": 1
+        "training_samples": 0
       },
       "truth": {
         "weights": [
@@ -8528,7 +8558,7 @@
           0.07642334340786547
         ],
         "bias": 0.007634705397865178,
-        "training_samples": 1
+        "training_samples": 0
       },
       "3": {
         "weights": [
@@ -8598,7 +8628,7 @@
           -0.09366221845389933
         ],
         "bias": 0.008037191761716156,
-        "training_samples": 1
+        "training_samples": 0
       },
       "4": {
         "weights": [
@@ -9228,7 +9258,7 @@
           -0.07034700132162651
         ],
         "bias": 0.013883424310582716,
-        "training_samples": 2
+        "training_samples": 0
       },
       "example": {
         "weights": [
@@ -9298,7 +9328,7 @@
           0.07332435036063614
         ],
         "bias": 0.0042778778889568155,
-        "training_samples": 1
+        "training_samples": 0
       },
       "1 1": {
         "weights": [
@@ -16722,29 +16752,29 @@
       },
       "planet": {
         "weights": [
-          0.0004573280460479425,
-          0.07527959025461582,
-          0.039734713773952816,
-          -0.01378245935810105,
-          -0.011468551947631432,
-          0.029843443506494732,
-          -0.061517235126038926,
-          -0.08315933573741106,
-          0.07848198118852591,
-          0.06171500946043239,
-          0.0021107631246674087,
-          -0.07340150837981359,
-          -0.08599410990632415,
-          0.012119584061078274,
-          0.1054470078352611,
-          0.07336000942726832,
-          0.009063734828203497,
-          0.09707547567159693,
-          -0.07275672357583979,
-          0.07888193134201721,
-          -0.02632558436726999,
-          0.09607569198613101,
-          -0.07100414150047374,
+          0.009271774337714579,
+          0.08183983349442209,
+          0.047756976507525785,
+          -0.00555563620325313,
+          -0.008509541255526302,
+          0.03589730197297492,
+          -0.052971355038368716,
+          -0.07828929232533842,
+          0.08522138057255992,
+          0.06545669137047344,
+          0.010449473021268342,
+          -0.06467501361922595,
+          -0.0808412384061577,
+          0.016651172986046747,
+          0.109578720634004,
+          0.077996514822205,
+          0.009966646888319103,
+          0.09828798277796313,
+          -0.07160484182479189,
+          0.07986709336593975,
+          -0.025143389938562938,
+          0.09712147936537187,
+          -0.06973100903878922,
           -0.022983817697593965,
           0.022617624360212238,
           -0.017486767844241392,
@@ -16787,8 +16817,8 @@
           0.003407794513396928,
           -0.0282759881418361
         ],
-        "bias": 0.013182463436164278,
-        "training_samples": 4
+        "bias": 0.023588764844694236,
+        "training_samples": 2
       },
       "star": {
         "weights": [
@@ -17352,26 +17382,26 @@
       },
       "planets": {
         "weights": [
-          0.023403801402192993,
-          -0.04441281550339161,
-          -0.07524665688248527,
-          0.07504749872339984,
-          0.03120970200098785,
-          -0.042479005375230174,
-          -0.06614566435287372,
-          -0.020618029534544682,
-          0.08039519154389253,
-          -0.04255679480918329,
-          -0.04516220582916621,
-          0.005552662356396771,
-          0.1016172799743962,
-          0.0995861935251083,
-          -0.023563955139858657,
-          -0.06773703428620328,
-          -0.04520285973077887,
-          -0.05196755943880528,
-          -0.08414515703617026,
-          -0.09085265051538577,
+          0.031070863784591427,
+          -0.0376940163286341,
+          -0.06881480729297154,
+          0.08230610560899915,
+          0.033756189035851834,
+          -0.035155072200022446,
+          -0.05868021230716977,
+          -0.01632972918277123,
+          0.0846755581063057,
+          -0.03526954012504571,
+          -0.04035520066725901,
+          0.00966745178108297,
+          0.10870377386746909,
+          0.10628957293956859,
+          -0.01893857247223348,
+          -0.060323643014165707,
+          -0.03903783341763102,
+          -0.04730543885463935,
+          -0.08167248121970813,
+          -0.08830616348052178,
           0.09566834198730814,
           0.021191497380221296,
           -0.031451324925678384,
@@ -17417,8 +17447,8 @@
           -0.0630702503088422,
           -0.04616944564375383
         ],
-        "bias": 0.017726735004885086,
-        "training_samples": 4
+        "bias": 0.026742806669991986,
+        "training_samples": 3
       },
       "orbit": {
         "weights": [
@@ -18748,7 +18778,7 @@
           -0.008899726179498343
         ],
         "bias": 0.0023320135931018822,
-        "training_samples": 1
+        "training_samples": 0
       },
       "99": {
         "weights": [
@@ -18818,7 +18848,7 @@
           0.05768762507169464
         ],
         "bias": 0.0009168062595910236,
-        "training_samples": 1
+        "training_samples": 0
       },
       "1029": {
         "weights": [
@@ -18888,7 +18918,7 @@
           -0.017999769386752892
         ],
         "bias": 0.001649177044334552,
-        "training_samples": 1
+        "training_samples": 0
       },
       "not a number": {
         "weights": [
@@ -18958,7 +18988,7 @@
           0.03633212006069217
         ],
         "bias": 0.0025906087480453404,
-        "training_samples": 1
+        "training_samples": 0
       },
       "french": {
         "weights": [
@@ -19028,7 +19058,7 @@
           -0.029826551137840968
         ],
         "bias": 0.0006292259492017378,
-        "training_samples": 1
+        "training_samples": 0
       },
       "japanese": {
         "weights": [
@@ -19098,7 +19128,7 @@
           0.04017517317107083
         ],
         "bias": 0.0032390167405132245,
-        "training_samples": 1
+        "training_samples": 0
       },
       "languages": {
         "weights": [
@@ -19168,7 +19198,7 @@
           -0.06194332454527432
         ],
         "bias": 0.0028523798281995076,
-        "training_samples": 3
+        "training_samples": 0
       },
       "language": {
         "weights": [
@@ -19238,7 +19268,7 @@
           0.027238245312791454
         ],
         "bias": 0.0008310997654453096,
-        "training_samples": 1
+        "training_samples": 0
       },
       "rock": {
         "weights": [
@@ -19308,7 +19338,7 @@
           -0.0756769226416471
         ],
         "bias": 0.0027376378131149844,
-        "training_samples": 1
+        "training_samples": 0
       },
       "game": {
         "weights": [
@@ -19378,7 +19408,7 @@
           -0.07642680483664277
         ],
         "bias": 0.00124275904504186,
-        "training_samples": 1
+        "training_samples": 0
       },
       "planets:": {
         "weights": [
@@ -19448,7 +19478,7 @@
           -0.04129125640414284
         ],
         "bias": 0.004264556520805699,
-        "training_samples": 1
+        "training_samples": 0
       },
       "many planets": {
         "weights": [
@@ -19518,7 +19548,7 @@
           -0.024502678579866183
         ],
         "bias": 0.0013850162042356616,
-        "training_samples": 1
+        "training_samples": 0
       },
       "pluto": {
         "weights": [
@@ -19588,27 +19618,27 @@
           -0.04448935745574039
         ],
         "bias": 0.014087960438418083,
-        "training_samples": 5
+        "training_samples": 0
       },
       "mars": {
         "weights": [
-          -0.053699193993262596,
-          0.010935511277480476,
-          -0.07802068450086963,
-          -0.019892187500964578,
-          -0.011760083434540686,
+          -0.05093325272115642,
+          0.013270396766920756,
+          -0.07507513665265267,
+          -0.01691071833752545,
+          -0.010826129238764574,
           0.0783632394310647,
-          0.016603160891923794,
-          0.04458994890186971,
+          0.019225416903141338,
+          0.04757141806530883,
           -0.08423243269679942,
-          0.00010018509509608642,
+          0.0024350705845363656,
           0.05414105099571089,
-          -0.03202610744032256,
-          -0.04486017230267278,
-          -0.017172615367620242,
-          -0.07791264512417401,
-          0.09739283828714856,
-          -0.022952532137628406,
+          -0.02915240222254991,
+          -0.04213015234578876,
+          -0.014837729878179964,
+          -0.07511078253684567,
+          0.09987140903747747,
+          -0.019935141658967124,
           0.05977927173545003,
           -0.0036733519730660913,
           0.06129383361720289,
@@ -19657,31 +19687,31 @@
           -0.0935593162352788,
           -0.035118171561549394
         ],
-        "bias": 0.0032634120389789844,
-        "training_samples": 1
+        "bias": 0.006711858300306166,
+        "training_samples": 0
       },
       "jupiter": {
         "weights": [
-          0.06975799988975986,
-          -0.09497081249934897,
-          0.08293059649988747,
-          0.011054399727009064,
-          0.046918909421587336,
-          0.08516689312541376,
-          0.06851316626408302,
-          0.044682889774307955,
+          0.06983559441013464,
+          -0.09488168365837794,
+          0.0830144824678602,
+          0.011130945672784177,
+          0.0470069896879587,
+          0.08523924477279024,
+          0.06859914938125507,
+          0.04471015271389909,
           0.0005719435239139392,
-          0.010542943590177298,
-          0.06312538793079894,
+          0.010619489535952412,
+          0.06321241962257065,
           -0.0019351077519005827,
-          0.02217705626429134,
+          0.022245213613269182,
           -0.07032940677221891,
-          -0.05151306709226226,
-          0.06132840877954691,
-          0.00848249451441077,
-          -0.018792916607827385,
-          0.06909921717361388,
-          0.049567534917256434,
+          -0.051429181124289534,
+          0.061408100449121,
+          0.00855065186338861,
+          -0.018711127789053976,
+          0.06917156882099036,
+          0.0496556151836278,
           -0.06550469339580631,
           -0.07799092433897255,
           0.04313662575633978,
@@ -19727,8 +19757,8 @@
           0.09422747831892056,
           -0.020849034683453047
         ],
-        "bias": 0.0012444785141533484,
-        "training_samples": 1
+        "bias": 0.0013451416757206212,
+        "training_samples": 0
       },
       "a planet?": {
         "weights": [
@@ -19798,7 +19828,7 @@
           -0.06341003967756823
         ],
         "bias": 0.0020483385203760507,
-        "training_samples": 1
+        "training_samples": 0
       },
       "name of a planet": {
         "weights": [
@@ -19868,7 +19898,7 @@
           -0.010071152368110042
         ],
         "bias": 0.004637629988674774,
-        "training_samples": 1
+        "training_samples": 0
       },
       "planet with p": {
         "weights": [
@@ -19938,7 +19968,7 @@
           0.07748245411577076
         ],
         "bias": 0.00184010091403652,
-        "training_samples": 1
+        "training_samples": 0
       },
       "?": {
         "weights": [
@@ -20008,7 +20038,7 @@
           0.08396551104572655
         ],
         "bias": 0.0020446408230705847,
-        "training_samples": 1
+        "training_samples": 0
       },
       "blue": {
         "weights": [
@@ -20078,7 +20108,7 @@
           0.05351634922086415
         ],
         "bias": 0.004417906819751183,
-        "training_samples": 1
+        "training_samples": 0
       },
       "colors": {
         "weights": [
@@ -20148,7 +20178,7 @@
           -0.02299734850449442
         ],
         "bias": 0.002515383507788495,
-        "training_samples": 1
+        "training_samples": 0
       },
       "light": {
         "weights": [
@@ -20218,7 +20248,7 @@
           0.09376773454881812
         ],
         "bias": 0.0024203020738010656,
-        "training_samples": 1
+        "training_samples": 0
       },
       "your": {
         "weights": [
@@ -20288,7 +20318,7 @@
           -0.023185737265984274
         ],
         "bias": 0.003571287199599488,
-        "training_samples": 1
+        "training_samples": 0
       },
       "curious": {
         "weights": [
@@ -20358,78 +20388,638 @@
           -0.016430664929044547
         ],
         "bias": 0.0008880177864371884,
+        "training_samples": 0
+      },
+      "three planets": {
+        "weights": [
+          0.014134576309526175,
+          -0.010691860545658544,
+          0.05397591586693873,
+          0.026990450093171955,
+          -0.06708927174187439,
+          -0.0915352459015065,
+          -0.025387052644910476,
+          0.0012701876320948436,
+          -0.05294664648250334,
+          -0.0779377940542023,
+          0.017190079188716588,
+          0.08683448818050604,
+          0.08308952159569703,
+          0.0293254632287852,
+          0.09173791747531157,
+          0.07524590420887957,
+          0.10087111907107452,
+          -0.034014712684147526,
+          0.06957076275905252,
+          0.025810873131738524,
+          0.09423286263242937,
+          -0.0032928662850957315,
+          0.0675834655780208,
+          -0.09275323539793139,
+          0.08823125164441264,
+          -0.00928143463209026,
+          0.04165033425531433,
+          0.01359940165658565,
+          0.0013158034543346942,
+          -0.04911053540892704,
+          -0.02452685621350198,
+          -0.05561218404871702,
+          0.0062499296403678494,
+          0.030401315939007457,
+          0.06925369308360689,
+          0.04567140697699104,
+          -0.005199169383659123,
+          -0.07978719575989943,
+          0.0898912504608078,
+          -0.004589204550883573,
+          -0.08549455475123513,
+          -0.03892729960451673,
+          -0.09292246742764494,
+          -0.0378303254671839,
+          0.008787723943027556,
+          -0.06163830179192647,
+          0.035167096676497644,
+          -0.05174812299529148,
+          -0.0056419756337530436,
+          0.09079872656937596,
+          -0.059751691913463835,
+          0.02306298489306398,
+          0.007134915292135585,
+          -0.05634569499894946,
+          0.05403300658612151,
+          -0.06971188247302769,
+          -0.006945863665549348,
+          -0.01818324154898128,
+          0.00681315413103982,
+          0.06724116937873917,
+          -0.06006388823476223,
+          -0.09349072783914059,
+          0.09041089821554135,
+          -0.049694366937315104
+        ],
+        "bias": 0.002434616355325788,
+        "training_samples": 1
+      },
+      "two planets": {
+        "weights": [
+          -0.07350723719305324,
+          0.011461050437960876,
+          0.04622365151970482,
+          -0.0640980884698024,
+          -0.019942465781951926,
+          0.0437600953049803,
+          0.0817816306361742,
+          -0.06898735760771789,
+          -0.03965830546404221,
+          -0.08956953494142067,
+          0.033586606471145405,
+          0.07644097324137603,
+          -0.001955900335637972,
+          0.09829981749287862,
+          0.06478693820143511,
+          -0.031024263811223154,
+          0.029717368960143337,
+          0.09180660540140015,
+          0.04248708278147251,
+          0.033979971083934475,
+          0.039560925857778116,
+          -0.03560785323080642,
+          0.07571104144194093,
+          0.027434083733386974,
+          -0.017966618423359868,
+          0.10101732837230491,
+          0.029635254419063353,
+          -0.06305115116471018,
+          -0.06983407459041525,
+          -0.09216556058440796,
+          -0.036650121757765414,
+          0.048226241115578494,
+          0.0053862245339567506,
+          -0.06191852382320127,
+          -0.05623177569287688,
+          -0.02210497326102681,
+          0.0465527575821435,
+          -0.020723426185073973,
+          -0.014599954062407841,
+          -0.017123619894798353,
+          -0.006169855042776562,
+          -0.045145088547034966,
+          -0.06181715972288411,
+          0.06756059888879712,
+          -0.08112053082829847,
+          -0.014759733321764876,
+          0.07927571497782929,
+          0.029002315196117817,
+          -0.030733917983017972,
+          0.04697237757167447,
+          0.09003751912144065,
+          -0.04647133233725105,
+          0.05377425333986216,
+          -0.06307192998321123,
+          -0.04540282046297788,
+          0.08399020144755281,
+          0.07610282678577468,
+          -0.07223475289325582,
+          0.025601003651325005,
+          0.09612397870831188,
+          -0.05633849694707924,
+          0.017388919518695617,
+          0.02661181555082956,
+          0.06565644727160264
+        ],
+        "bias": 0.0032975354974972477,
+        "training_samples": 3
+      },
+      "two planet": {
+        "weights": [
+          0.04415580139490624,
+          0.01300701119369265,
+          -0.01862383233006755,
+          0.06475966363199881,
+          0.025865806997384288,
+          0.026713132323245646,
+          -0.026151097965385776,
+          0.07792503199769617,
+          0.04277737803904634,
+          0.0023651984493479323,
+          0.015033532661724441,
+          -0.0059815255618994425,
+          -0.006141832127928771,
+          0.008716370164497793,
+          0.0654285193803659,
+          -0.08218562346214998,
+          -0.023588537259075216,
+          0.07124079674973671,
+          0.07923607595188396,
+          -0.004724131490287046,
+          0.04307002768000682,
+          -0.0075248612285290905,
+          0.05318797829197716,
+          0.024123347047818093,
+          0.06507733305416215,
+          0.029148923109030958,
+          -0.029260456642696372,
+          0.08509748280104297,
+          -0.05310461975508702,
+          -0.020483911511975397,
+          0.036284664027539826,
+          0.06046518395288648,
+          -0.0004313788179000355,
+          0.0339663876184374,
+          -0.031738002430533624,
+          0.0056807864631058524,
+          -0.06621912785552692,
+          0.09076321667317985,
+          0.057016174212694753,
+          0.021438311058176535,
+          0.07128182738993896,
+          0.016974542705800413,
+          0.018897004772954418,
+          -0.019091060521545924,
+          0.0455416621773376,
+          -0.03395150467445844,
+          0.0697721574678227,
+          -0.008944218624934927,
+          -0.0853017109378199,
+          -0.05036750242956174,
+          0.07484706124183202,
+          0.06210151107683112,
+          0.04978928784455705,
+          0.015409020451565628,
+          0.08800179439516889,
+          -0.022736851734916935,
+          -0.002093176261784374,
+          0.010565297717929883,
+          -0.04822008965860929,
+          0.005390050231453697,
+          -0.029883526081753584,
+          0.0940711534650999,
+          -0.03864424781952294,
+          -0.004142776219409061
+        ],
+        "bias": 0.00037911314196722545,
+        "training_samples": 1
+      },
+      "multiple": {
+        "weights": [
+          -0.07744431631090351,
+          -0.07594560655928868,
+          0.011041218379780867,
+          -0.04856194833909454,
+          -0.009875931717053523,
+          -0.07642176856789236,
+          -0.06704757195231488,
+          0.08504877914832602,
+          -0.06190936527085966,
+          0.07418314032231454,
+          -0.07709424050811002,
+          0.012015831005128704,
+          -0.05141139521964123,
+          0.0851531096680876,
+          0.10969376071924017,
+          0.012203873036218782,
+          -0.03237766195226757,
+          0.01439736535540279,
+          0.00763579331434068,
+          0.06529512477322136,
+          0.04737316501025192,
+          -0.006438284091661708,
+          0.016534567154208535,
+          -0.013071803767653822,
+          -0.055341617316465544,
+          0.07976105683095235,
+          -0.04297991998512016,
+          0.09603379914785905,
+          -0.04389814603741016,
+          -0.07688931061886878,
+          0.07266564959148755,
+          -0.05872042047882134,
+          0.0049000162475747455,
+          -0.06551630791804544,
+          0.06875027180706586,
+          0.0624896839471146,
+          -0.024144691426458614,
+          0.0543291087817,
+          -0.08379601412623561,
+          -0.030738261523156174,
+          -0.07648360221372506,
+          0.04807285285623822,
+          -0.09291616356555253,
+          -0.00873245478170348,
+          0.09400413897720294,
+          -0.04152291211475989,
+          -0.09596598148778997,
+          -0.04540030258987218,
+          -0.0664405741696511,
+          0.026890418993469,
+          -0.05298063997036298,
+          -0.023329614126024592,
+          -0.04318191963282669,
+          0.05141736133569194,
+          -0.0547359738015401,
+          0.010921926969089557,
+          0.043144449182882794,
+          0.06819458423877425,
+          0.07538222514606302,
+          -0.0861306317610021,
+          -0.012621409302160116,
+          0.027196842065393967,
+          0.05866355964838757,
+          -0.07434064134405663
+        ],
+        "bias": 0.0158878990289633,
+        "training_samples": 4
+      },
+      "many numbers": {
+        "weights": [
+          0.03392672938102376,
+          0.0247333552690156,
+          0.0061152655229670325,
+          -0.04467927417438741,
+          -0.04680980960156065,
+          0.10550778259320659,
+          0.03556159359941993,
+          -0.010206343735692576,
+          0.0197728821341663,
+          -0.07717032657382147,
+          0.10283721452189247,
+          -0.048195806952562606,
+          0.06341073599649964,
+          0.02102197156065188,
+          -0.08497340813283466,
+          -0.047263246794847606,
+          -0.09393153949198954,
+          -0.019150908728410788,
+          0.04100629200247392,
+          -0.039772619510343526,
+          0.05208926859784868,
+          -0.0948088137247908,
+          0.09434737865789133,
+          0.06802608846792782,
+          -0.035470539516377006,
+          -0.06894705176898526,
+          0.04677748620807681,
+          -0.015895795893316262,
+          0.10043927344887733,
+          0.04972282709625093,
+          0.06553438850198032,
+          -0.05072527685788218,
+          0.017718684634801096,
+          -0.003230146927129097,
+          0.027095723761314514,
+          -0.026929117517705693,
+          -0.040680320416534056,
+          -0.06760964809812828,
+          -0.0013439479368832358,
+          -0.06459036349334346,
+          0.06942842963261106,
+          0.0698636925772127,
+          0.06291246518125179,
+          0.07570812826278359,
+          -0.02487787257237406,
+          0.0873943038172442,
+          0.01570504181825108,
+          0.07824357039475446,
+          0.0630459357043481,
+          0.09335932074344974,
+          -0.040708699711047874,
+          0.07702779953369429,
+          0.07695182504764725,
+          -0.06974735616839095,
+          0.08140032686383145,
+          -0.07611500686675232,
+          0.028023637934448425,
+          0.005129638374463855,
+          -0.08088698309998937,
+          -0.08658756398305421,
+          -0.04854137785824726,
+          0.09839943672040952,
+          -0.04771988523397395,
+          0.09445518351810397
+        ],
+        "bias": 0.008303051036795734,
+        "training_samples": 3
+      },
+      "eaxmple of many numbers": {
+        "weights": [
+          -0.06376284410604566,
+          -0.06645734452264711,
+          0.022837278147506683,
+          -0.08545335976269107,
+          -0.002091569390140927,
+          -0.0026485731675620627,
+          -0.05097244138237645,
+          -0.008953302960816714,
+          0.04134493517476273,
+          0.025408283008084277,
+          0.009267073078813207,
+          -0.0929505215517932,
+          0.07357926115660114,
+          0.0434170935240892,
+          -0.06464995518746305,
+          0.015694090849956613,
+          -0.06877926837496738,
+          0.09015394583134206,
+          0.050734560907505145,
+          0.002363384511438203,
+          0.007622835315594484,
+          -0.04382043894181595,
+          -0.08243613552577178,
+          -0.07399884231334307,
+          0.044988927096175524,
+          0.026291268844688832,
+          0.04490112392737616,
+          0.07887473371260213,
+          0.01515767422430877,
+          0.10058373672235522,
+          -0.005124639407775972,
+          0.10023061490010327,
+          0.014509305104581894,
+          -0.024330369301252572,
+          -0.0028494177687575007,
+          -0.053924955377511304,
+          0.08213770113358757,
+          -0.06289243483159809,
+          -0.029057599067630988,
+          0.049412615939732396,
+          0.025730254484572612,
+          -0.06822338449970797,
+          -0.08463793475484203,
+          0.001346216077538001,
+          0.004657044130992355,
+          -0.0647535499460273,
+          -0.09924827866781111,
+          0.04977786561323805,
+          0.05368049414532497,
+          0.06992541773022867,
+          -0.0068517059995583385,
+          0.0028669881093010413,
+          -0.06181229627431864,
+          -0.062255750445302384,
+          0.07949188013166347,
+          0.04556806135460842,
+          -0.02766251454911335,
+          -0.08631292197434573,
+          -0.06979621228109088,
+          0.0761057541017936,
+          -0.0795597478954975,
+          -0.04655864410574331,
+          0.0903415206996728,
+          0.012266009420810686
+        ],
+        "bias": 0.003519543827947789,
+        "training_samples": 1
+      },
+      "many numbers?": {
+        "weights": [
+          0.05417068409417661,
+          -0.0434370632171719,
+          -0.06556567066252422,
+          0.06915627063735995,
+          0.09164444067853997,
+          -0.07555978856026234,
+          0.06047526254184596,
+          0.042995594999197057,
+          0.07734588981907689,
+          -0.04764384997365545,
+          -0.027116032200214715,
+          -0.0008470050410074466,
+          -0.043624755072198325,
+          -0.09631441008074253,
+          -0.049057949516385174,
+          -0.027666966177587196,
+          0.06423511419174913,
+          -0.09850044688420861,
+          0.07718035418534228,
+          0.09240929810545583,
+          -0.03456238554872866,
+          0.067748294162048,
+          -0.03208140318062287,
+          0.022388853505931713,
+          0.0617960566583273,
+          -0.03725551687530175,
+          0.04792153107176232,
+          -0.0049145003966870335,
+          0.08011608816067001,
+          -0.08310401506579894,
+          0.024798038845893492,
+          -0.033294054400463555,
+          -0.00014392937184390408,
+          0.039140536222520374,
+          -0.041428435353432484,
+          0.049838250575149956,
+          0.01204445583067297,
+          0.027488328430158665,
+          -0.09937929072607024,
+          0.02984512156031341,
+          -0.08184883577412494,
+          -0.08540033465180785,
+          -0.012715019037729286,
+          0.06846198708535381,
+          0.08908168257033827,
+          0.08404673681049124,
+          -0.00982849606039464,
+          0.08303604577851412,
+          -0.03032732009484361,
+          -0.08075291701652812,
+          -0.09838501869901727,
+          -0.07368481771828812,
+          -0.0693373540274968,
+          -0.06171967834845689,
+          0.027931898199807514,
+          0.07820690815817441,
+          -0.030900197606334362,
+          -0.055387704944249695,
+          -0.0693064131092249,
+          -0.08839794976256098,
+          -0.02976440726642418,
+          0.08637484411170157,
+          -0.07556409517335921,
+          -0.08868455892853298
+        ],
+        "bias": 0.0012596539173110712,
+        "training_samples": 1
+      },
+      "wgat": {
+        "weights": [
+          0.017774262428413984,
+          -0.04093176430843409,
+          -0.08055286409202038,
+          -0.010858792252248211,
+          -0.042170258065232495,
+          -0.046890487908978935,
+          -0.029123808701488146,
+          -0.049401636288662655,
+          0.06414281643953385,
+          0.08142993253934715,
+          -0.08951022231661654,
+          0.015342390943617267,
+          0.024843875859031722,
+          0.08058235378505513,
+          -0.011374217499889457,
+          0.05396653594701749,
+          -0.0027226781146020007,
+          -0.07611200226174611,
+          -0.07312773212939756,
+          0.0595092033064179,
+          0.04398181307937504,
+          -0.005639683425458467,
+          -0.0349341477817247,
+          0.07859523338661231,
+          0.08757298026883695,
+          0.07584310945412304,
+          0.09396523872193391,
+          0.08848803781853648,
+          -0.04352356791246988,
+          0.005555133682963703,
+          0.04910914334959987,
+          -0.00936146566805969,
+          0.025496811047388268,
+          0.0055726159978656264,
+          0.05263312200467363,
+          0.02955825587859706,
+          -0.04915432318684179,
+          -0.06267153743955707,
+          -0.0461585925863312,
+          0.006606384971374377,
+          -0.018862570747748816,
+          -0.052837176295696286,
+          0.02752137100611568,
+          -0.09497119551551314,
+          -0.0792651179878054,
+          -0.008094273277670316,
+          -0.036552349641069556,
+          -0.04868241583612376,
+          0.05224090553768615,
+          -0.017580353659209708,
+          -0.011696988519780557,
+          -0.0015386221578276016,
+          -0.0499333313864746,
+          -0.02403637801040137,
+          -0.07044329450220384,
+          0.055285579132027474,
+          -0.04421268954077853,
+          -0.052525871516978496,
+          0.07383081155779647,
+          -0.09142869175690085,
+          0.054659749091611726,
+          -0.014208995694031154,
+          0.0465338464727412,
+          0.030766099193980545
+        ],
+        "bias": 0.002458070010717456,
         "training_samples": 1
       }
     },
     "global_network": {
       "weights": [
-        0.16882005099700004,
-        0.06549614471410502,
-        0.11402632242243722,
-        0.03181626868551428,
-        0.06244401753071684,
-        0.06649555693603186,
-        0.04357597813148154,
-        0.09343627879477637,
-        0.07895497405390829,
-        0.06532705107319411,
-        0.07592097195873454,
-        0.022339049582746514,
-        0.005415302485417866,
-        0.07098355670933934,
-        0.07354874639515815,
-        0.10560967792415352,
-        0.010690464930250585,
-        0.04841857363057067,
-        -0.028614744117173314,
-        0.11853655583924091,
-        -0.0511465457561379,
-        0.04246385435121526,
-        0.07655442319112096,
-        -0.04708784202261796,
-        0.06918745603138594,
-        0.11248743712892276,
-        -0.0188374935670481,
-        0.0757604199028498,
-        -0.02455991786995163,
-        0.04478412968828228,
-        0.015040194182239832,
-        0.079621365897619,
-        0.07738006741443615,
-        -0.03417561230896581,
-        -2.1259461490948626e-05,
-        0.0032442713278193836,
-        0.006900537487267529,
-        -0.04541500157298779,
-        -0.07911692013510845,
-        -0.06065785578333434,
-        0.04949786775944603,
-        -0.06434464101710226,
-        0.009478877779783908,
-        -0.016171130370840253,
-        0.017454035841594023,
-        -0.08271497694208957,
-        0.08624533802172527,
-        -0.048176839671492847,
-        -0.03085008216075616,
-        -0.04862916428357116,
-        -0.0243987468007055,
-        0.02554979801414392,
-        -0.0952412394068527,
-        0.07689409346395062,
-        -0.08442534281869281,
-        -0.02959848016640157,
-        -0.024505912989094852,
-        -0.005520743996347832,
-        0.0370140302843012,
-        -0.047077442776914946,
-        0.014387746723889608,
-        0.015287986684381541,
-        0.0661171983889692,
-        -0.037270302356268076
+        0.09708573102658277,
+        -0.06091408394570739,
+        0.01139796024884876,
+        0.0698026195529918,
+        -0.08530853196442399,
+        -0.05692245812034507,
+        -0.06677257258913064,
+        -0.046835206331281,
+        -0.010120392833425002,
+        -0.018114329412713695,
+        -0.026890051484617025,
+        -0.03005155532504196,
+        0.0912670425444731,
+        -0.08253287371550738,
+        -0.05207947702572984,
+        -0.08542260348456501,
+        -0.0018633167698002273,
+        -0.08373876249006296,
+        -0.06315417223756226,
+        0.04406360358404954,
+        -0.034963372243623544,
+        -0.06237528891719655,
+        0.0760428484669542,
+        0.08307933402718198,
+        0.012153620289199196,
+        0.05254698513467701,
+        0.05652322767151752,
+        -0.0681682286204151,
+        0.035457396222418114,
+        -0.08920700184093067,
+        0.022065950902095177,
+        -0.01137164478941935,
+        -0.04736938722704396,
+        -0.08136180624359551,
+        -0.005203114994105085,
+        0.07445124448293208,
+        0.036409014178868715,
+        0.015042503910189159,
+        0.08785490561041176,
+        0.03366754731607252,
+        0.08898888091750523,
+        0.026200540158223734,
+        -0.0020077062006470525,
+        0.0918341216842202,
+        0.08909191971595373,
+        0.013607458833264974,
+        0.08421926468091959,
+        -0.02019701232383582,
+        -0.05165889372068575,
+        -0.08468482081669454,
+        -0.03971618217985944,
+        0.051761538514948774,
+        -0.04663930241620773,
+        0.09240027405458176,
+        0.050169080138422945,
+        -0.06411988737282977,
+        -0.09569897572944085,
+        -0.08349028354467501,
+        0.011548294637302517,
+        0.002256309709367743,
+        0.06659899260995217,
+        0.0398692273064368,
+        -0.07381422733373169,
+        0.033885040462402566
       ],
-      "bias": 0.17751662475152205,
-      "training_samples": 65
+      "bias": 0.0,
+      "training_samples": 0
     }
   },
   "episodic": [
@@ -27098,6 +27688,358 @@
         "pred_error": 0.38,
         "spelling_fixed": "curious -> curious:"
       }
+    },
+    {
+      "id": 606,
+      "timestamp": "2026-07-14T14:12:48.706455",
+      "user_input": "what are three planets?",
+      "agent_response": "That's worth exploring.\nI don't know about 'three planets' yet.\nCould you teach me?  For example:\n  \"three planets: [what it is]\"",
+      "metadata": {
+        "topic": "three planets",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 607,
+      "timestamp": "2026-07-14T14:12:57.164704",
+      "user_input": "what is a planet?",
+      "agent_response": "That's worth exploring.\n'Planet' means a large body orbiting a star  (11%)\n  Also: related_to like remembering earth  (100%)\n  Also: concept_cluster i.t,earth,what  (100%)\n  Also: related_to life  (100%)",
+      "metadata": {
+        "topic": "planet",
+        "pred_error": 0.2,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 608,
+      "timestamp": "2026-07-14T14:13:09.965186",
+      "user_input": "name planets",
+      "agent_response": "I didn't quite catch that.\nTry the format:  \"Topic: what it is\"\nExample:  \"gravity: pulls objects toward each other\"",
+      "metadata": {
+        "topic": "planet",
+        "pred_error": 0.0,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 609,
+      "timestamp": "2026-07-14T14:13:16.444674",
+      "user_input": "three planets",
+      "agent_response": "I didn't quite catch that.\nTry the format:  \"Topic: what it is\"\nExample:  \"gravity: pulls objects toward each other\"",
+      "metadata": {
+        "topic": "planet",
+        "pred_error": 0.18,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 610,
+      "timestamp": "2026-07-14T14:14:01.406070",
+      "user_input": "earth: is a planet",
+      "agent_response": "Got it \u2014 earth: is a type of planet. That's exciting!\n\nWhat kind of thing is 'like'?",
+      "metadata": {
+        "topic": "earth",
+        "pred_error": 0.2,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 611,
+      "timestamp": "2026-07-14T14:14:11.164241",
+      "user_input": "mars: is a planet",
+      "agent_response": "Got it \u2014 mars: is a type of planet. That's exciting!",
+      "metadata": {
+        "topic": "mars",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 612,
+      "timestamp": "2026-07-14T14:14:21.948242",
+      "user_input": "jupiter: is a planet",
+      "agent_response": "Got it \u2014 jupiter: is a type of planet. That's exciting!",
+      "metadata": {
+        "topic": "jupiter",
+        "pred_error": 0.0,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 613,
+      "timestamp": "2026-07-14T14:14:33.187664",
+      "user_input": "three planets: are earth, mars, and jupiter",
+      "agent_response": "Got it \u2014 three planets: has the property earth, mars, and jupiter. That's exciting!",
+      "metadata": {
+        "topic": "three planets",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 614,
+      "timestamp": "2026-07-14T14:14:45.392924",
+      "user_input": "what are three planets?",
+      "agent_response": "I love learning about this!\n'Three Planets' is earth, mars, and jupiter  (65%)\n  Also: related_to planet  (30%)",
+      "metadata": {
+        "topic": "three planets",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 615,
+      "timestamp": "2026-07-14T14:58:46.612828",
+      "user_input": "what is a planet",
+      "agent_response": "I love learning about this!\n'Planet' means a large body orbiting a star  (11%)\n  Also: related_to like remembering earth  (100%)\n  Also: concept_cluster i.t,earth,what  (100%)\n  Also: related_to life  (100%)",
+      "metadata": {
+        "topic": "planet",
+        "pred_error": 0.0,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 616,
+      "timestamp": "2026-07-14T20:44:01.202569",
+      "user_input": "you: can you math",
+      "agent_response": "Got it \u2014 you: can you math.\n\nWhat type of thing is 'you'?",
+      "metadata": {
+        "topic": "you",
+        "pred_error": 0.2,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 617,
+      "timestamp": "2026-07-14T20:47:17.185361",
+      "user_input": "tell me about planets",
+      "agent_response": "I didn't quite catch that.\nTry the format:  \"Topic: what it is\"\nExample:  \"gravity: pulls objects toward each other\"",
+      "metadata": {
+        "topic": "you",
+        "pred_error": 0.18,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 618,
+      "timestamp": "2026-07-14T20:48:07.422014",
+      "user_input": "planets are in space",
+      "agent_response": "Got it \u2014 planets has the property in space. That's exciting!\n  I now know 14 thing(s) about 'planets'.",
+      "metadata": {
+        "topic": "planets",
+        "pred_error": 0.2,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 619,
+      "timestamp": "2026-07-14T20:48:15.741573",
+      "user_input": "what are planets?",
+      "agent_response": "Oh, this is interesting!\n'Planets' means more than one planet  (64%)\n  Also: related_to in orbit around stars  (95%)\n  Also: concept_cluster orbit,many planets,jupiter,planet  (95%)\n  Also: synonym_of planet  (80%)",
+      "metadata": {
+        "topic": "planets",
+        "pred_error": 0.0,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 620,
+      "timestamp": "2026-07-14T20:49:05.290644",
+      "user_input": "name three planets",
+      "agent_response": "I didn't quite catch that.\nTry the format:  \"Topic: what it is\"\nExample:  \"gravity: pulls objects toward each other\"",
+      "metadata": {
+        "topic": "planets",
+        "pred_error": 0.18,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 621,
+      "timestamp": "2026-07-14T20:49:13.580991",
+      "user_input": "what are three planets?",
+      "agent_response": "I love learning about this!\n'Three Planets' is earth, mars, and jupiter  (63%)\n  Also: related_to planet  (28%)\n  Also: related_to earth, mars, and jupiter  (25%)",
+      "metadata": {
+        "topic": "three planets",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 622,
+      "timestamp": "2026-07-14T20:49:21.614229",
+      "user_input": "what are two planets?",
+      "agent_response": "That's fascinating!\nI don't know about 'two planets' yet.\nCould you teach me?  For example:\n  \"two planets: [what it is]\"",
+      "metadata": {
+        "topic": "two planets",
+        "pred_error": 0.2,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 623,
+      "timestamp": "2026-07-14T20:49:51.199774",
+      "user_input": "two planet can be mars and earth",
+      "agent_response": "Got it \u2014 two planet can be mars and earth. That's exciting!",
+      "metadata": {
+        "topic": "two planet",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 624,
+      "timestamp": "2026-07-14T20:50:35.951958",
+      "user_input": "two planets can be mars and earth",
+      "agent_response": "Got it \u2014 two planets can be mars and earth. That's exciting!\n  I now know 3 thing(s) about 'two planets'.",
+      "metadata": {
+        "topic": "two planets",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 625,
+      "timestamp": "2026-07-14T20:56:15.016479",
+      "user_input": "what is a planet?",
+      "agent_response": "That's fascinating!\n'Planet' means a large body orbiting a star  (14%)\n  Also: related_to like remembering earth  (100%)\n  Also: concept_cluster i.t,earth,what  (100%)\n  Also: related_to planets:  (100%)",
+      "metadata": {
+        "topic": "planet",
+        "pred_error": 0.2,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 626,
+      "timestamp": "2026-07-14T20:56:46.743646",
+      "user_input": "a planet: is one planet",
+      "agent_response": "Got it \u2014 planet: has the property one planet. That's exciting!\n  Inferred 6 more fact(s) from this.\n  e.g. earth has_property one planet (38%)\n  e.g. what has_property one planet (56%)",
+      "metadata": {
+        "topic": "planet",
+        "pred_error": 0.0,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 627,
+      "timestamp": "2026-07-14T20:58:28.715131",
+      "user_input": "two planets: is multiple planets",
+      "agent_response": "Got it \u2014 two planets: has the property multiple planets. That's exciting!",
+      "metadata": {
+        "topic": "two planets",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 628,
+      "timestamp": "2026-07-14T20:58:51.496341",
+      "user_input": "multiple: has attribute many",
+      "agent_response": "Got it \u2014 multiple: has attribute many. That's exciting!",
+      "metadata": {
+        "topic": "multiple",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 629,
+      "timestamp": "2026-07-14T20:59:01.098721",
+      "user_input": "multiple: is many",
+      "agent_response": "Got it \u2014 multiple: has the property many. That's exciting!",
+      "metadata": {
+        "topic": "multiple",
+        "pred_error": 0.18,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 630,
+      "timestamp": "2026-07-14T20:59:08.282067",
+      "user_input": "multiple mean many",
+      "agent_response": "Stored: 'multiple' means 'many'. That's exciting!\n(Did you mean 'mean:' instead of 'mean'?)",
+      "metadata": {
+        "topic": "multiple",
+        "pred_error": 0.18,
+        "spelling_fixed": "mean -> mean:"
+      }
+    },
+    {
+      "id": 631,
+      "timestamp": "2026-07-14T20:59:14.647206",
+      "user_input": "what is multiple?",
+      "agent_response": "That's fascinating!\n'Multiple' means many  (87%)\n  Also: has attribute many  (79%)\n  Also: has_property many  (69%)",
+      "metadata": {
+        "topic": "multiple",
+        "pred_error": 0.0,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 632,
+      "timestamp": "2026-07-14T20:59:38.765753",
+      "user_input": "many numbers: is more than one number",
+      "agent_response": "Got it \u2014 many numbers: has the property more than one number. That's exciting!",
+      "metadata": {
+        "topic": "many numbers",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 633,
+      "timestamp": "2026-07-14T20:59:46.678619",
+      "user_input": "what is many numbers?",
+      "agent_response": "That's fascinating!\n'Many Numbers' is more than one number  (65%)",
+      "metadata": {
+        "topic": "many numbers",
+        "pred_error": 0.18,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 634,
+      "timestamp": "2026-07-14T21:00:01.434950",
+      "user_input": "eaxmple of many numbers is 1,2,3,4,5",
+      "agent_response": "Got it \u2014 eaxmple of many numbers has the property 1,2,3,4,5. That's exciting!",
+      "metadata": {
+        "topic": "eaxmple of many numbers",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 635,
+      "timestamp": "2026-07-14T21:00:07.690578",
+      "user_input": "what are many numbers?",
+      "agent_response": "I love learning about this!\n'Many Numbers' is more than one number  (67%)\n  Also: related_to eaxmple of many numbers  (30%)",
+      "metadata": {
+        "topic": "many numbers",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 636,
+      "timestamp": "2026-07-14T21:00:20.118951",
+      "user_input": "what is a example of many numbers?",
+      "agent_response": "Got it \u2014 'what' is an example of 'many numbers?'.",
+      "metadata": {
+        "topic": "many numbers?",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
+    },
+    {
+      "id": 637,
+      "timestamp": "2026-07-14T21:00:46.746458",
+      "user_input": "wgat is example?",
+      "agent_response": "Oh, this is interesting!\nI don't know about 'wgat' yet.\nCould you teach me?  For example:\n  \"wgat: [what it is]\"",
+      "metadata": {
+        "topic": "wgat",
+        "pred_error": 0.38,
+        "spelling_fixed": ""
+      }
     }
   ],
   "reflection": {
@@ -29583,8 +30525,21 @@
       "read": 611,
       "errors?": 612,
       "curious": 613,
-      "about?": 614
+      "about?": 614,
+      "mars:": 615,
+      "jupiter:": 616,
+      "earth,": 617,
+      "mars,": 618,
+      "planet:": 619,
+      "multiple:": 620,
+      "attribute": 621,
+      "multiple?": 622,
+      "numbers:": 623,
+      "eaxmple": 624,
+      "1,2,3,4,5": 625,
+      "wgat": 626,
+      "example?": 627
     },
-    "word_count": 615
+    "word_count": 628
   }
 }
