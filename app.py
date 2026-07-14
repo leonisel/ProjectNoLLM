@@ -1,5 +1,8 @@
 import os
+<<<<<<< HEAD
+=======
 
+>>>>>>> b4efa4a329b7fef8b61ea03cc8d1151fdff9fbc4
 import sys
 from flask import Flask, render_template, request, jsonify
 from jarvix.agent import Jarvix
@@ -24,6 +27,11 @@ def chat():
     
     if not user_input:
         return jsonify({'error': 'Empty message'}), 400
+<<<<<<< HEAD
+    if len(user_input) > 500:
+        return jsonify({'error': 'Message too long (max 500 characters)'}), 400
+=======
+>>>>>>> b4efa4a329b7fef8b61ea03cc8d1151fdff9fbc4
     
     try:
         response = agent.process_input(user_input)
@@ -225,7 +233,11 @@ def graph_data():
                 'label': name,
                 'type': nd.node_type,
                 'value': max(5, min(30, 5 + degree * 2)),
+<<<<<<< HEAD
+                'title': f"Concept: {name}\nConnections: {degree}"
+=======
                 'title': f"Concept: {name}\\nConnections: {degree}"
+>>>>>>> b4efa4a329b7fef8b61ea03cc8d1151fdff9fbc4
             })
         
         edges = []
@@ -236,7 +248,11 @@ def graph_data():
                 'label': r,
                 'arrows': 'to',
                 'color': {'color': REL_COLOR.get(r, '#b2bec3'), 'highlight': '#ff6b6b'},
+<<<<<<< HEAD
+                'title': f"Relation: {r}\nConfidence: {round(data.confidence, 2)}"
+=======
                 'title': f"Relation: {r}\\nConfidence: {round(data.confidence, 2)}"
+>>>>>>> b4efa4a329b7fef8b61ea03cc8d1151fdff9fbc4
             })
         
         return jsonify({
