@@ -204,7 +204,102 @@ class SemanticMemory:
             s for (s, _, _), e in self.edges.items()
             if e.confidence >= threshold
         }
+    
+    
 
+    def replay_memory(self) -> int:
+        """
+        Sleep replay.
+
+        Strong memories reinforce themselves.
+        Related concepts become associated.
+        """
+
+        strengthened = 0
+
+        for edge in list(self.edges.values()):
+
+            if edge.confidence < 0.3:
+                continue
+
+            if edge.times_seen >= 3:
+                edge.reinforce(
+                    source="memory_replay",
+                    boost=0.01
+                )
+                strengthened += 1
+
+
+            if edge.relation in (
+                R_IS_A,
+                R_HAS_PROP,
+                R_HAS,
+                R_CAN
+            ):
+
+                if not self.get_edge(
+                    edge.subject,
+                    R_RELATED,
+                    edge.object_
+                ):
+
+                    self.add_edge(
+                        edge.subject,
+                        R_RELATED,
+                        edge.object_,
+                        confidence=0.25,
+                        source="memory_replay",
+                        inferred=True
+                    )
+
+        return strengthened
+    
+    # ── Dream reasoning ─────────────────────────────────────────────
+
+    def infer_properties(self) -> int:
+        """
+        Ontology inheritance:
+
+        dog is_a animal
+        animal has_property alive
+
+        becomes:
+
+        dog has_property alive
+        """
+
+        created = 0
+
+        for (child, relation, parent), edge in list(self.edges.items()):
+
+            if relation != R_IS_A:
+                continue
+
+            parent_properties = self.outgoing(
+                parent,
+                R_HAS_PROP
+            )
+
+            for prop_edge in parent_properties:
+
+                if not self.get_edge(
+                    child,
+                    R_HAS_PROP,
+                    prop_edge.object_
+                ):
+
+                    self.add_edge(
+                        child,
+                        R_HAS_PROP,
+                        prop_edge.object_,
+                        confidence=prop_edge.confidence * 0.8,
+                        source="ontology_reasoner",
+                        inferred=True
+                    )
+
+                    created += 1
+
+        return created
     # ── Decay ─────────────────────────────────────────────────────────────────
 
     def decay(self, rate: float = 0.02, min_conf: float = 0.05):

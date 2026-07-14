@@ -41,21 +41,24 @@ from .inner_voice            import InnerVoice
 from .response_generator     import ResponseGenerator
 from .knowledge_validator    import KnowledgeValidator
 from .ability_brain          import AbilityBrain
+import logging
+logger = logging.getLogger(__name__)
+
+
 
 class Jarvix:
     """Jarvix v6.0 — Predictive + Dreaming + Inner Voice architecture."""
-
     def __init__(self, data_file=None):
         # ── Core memory ────────────────────────────────────────────
         self.memory = MemoryStore(data_file=data_file)
-        self.ability = AbilityBrain()
-        self.brain  = Brain(self.memory)
+        self.brain  = Brain(self.memory)   # Move this UP so it exists first!
+        self.ability = AbilityBrain(self)  # Now AbilityBrain can safely bind to self.brain
         self.consolidator = ThoughtConsolidator(self.memory)
         
         
         # ── Cognitive architecture ─────────────────────────────────
         self.input_parser = InputParser()
-        self.working_memory  = WorkingMemory(max_turns=100)
+        self.working_memory = WorkingMemory(max_turns=BEHAVIOR_CONFIG["working_memory_max_turns"])
         self.thought_engine = ThoughtEngine()
         self.semantic_memory = SemanticMemory()
         self.knowledge_validator = KnowledgeValidator(
@@ -265,16 +268,6 @@ class Jarvix:
             self._run_dream_cycle()
 
         return response
-        # ------------------------------------------------
-        # Thought Consolidation
-        # ------------------------------------------------
-
-        try:
-            self.consolidator.run_cycle()
-        except Exception as e:
-            print(f"[ThoughtConsolidator] {e}")
-
-        return response
 
     # ================================================================
     # DREAMING (background)
@@ -433,7 +426,7 @@ class Jarvix:
                     net.bias    = wd.get("bias",    net.bias)
                     self.neural_learner.topic_networks[topic] = net
         except Exception as e:
-            print(f"Note: could not load flat state: {e}")
+            logger.debug(f"Note: could not load flat state: {e}")
 
         graph_path = self.memory.data_file.replace(".json", "_graph.json")
         if os.path.exists(graph_path):
@@ -457,7 +450,7 @@ class Jarvix:
                 if "predictive_engine" in sem_data:
                     self.predictive_engine.import_state(sem_data["predictive_engine"])
             except Exception as e:
-                print(f"Note: could not load semantic state: {e}")
+                logger.debug(f"Note: could not load semantic state: {e}")
 
     def _neural_data(self) -> dict:
         return {
