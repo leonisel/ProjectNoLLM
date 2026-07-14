@@ -286,7 +286,50 @@ class ExecutiveController:
         self._record(ctx, response)
         return response
 
+    def _split_compound_sentence(self, text: str) -> list[str]:
+        """Splits compound statements connected by 'and' or 'or' into simple sentences."""
+        # Simple split on conjunctions flanked by spaces to avoid splitting inside words
+        segments = re.split(r'\s+(?:and|or)\s+', text, flags=re.IGNORECASE)
+        # Clean up fragments and filter out empty strings
+        return [seg.strip() for seg in segments if seg.strip()]
+
     def _run_chat(self, ctx: PipelineContext) -> str:
+        # If the user is trying to teach a fact using a colon, don't throw it 
+        # away to say hello. Force it to run through the learning pipeline!
+        if ":" in ctx.resolved:
+            resolved_exp = ctx.resolved.replace("cannot", "can not")
+            ctx.triple = self.rel_det.detect(resolved_exp)
+            return self._run_teach(ctx)
+
+        # Intercept compound learning statements (e.g., contains 'and' / 'or') 
+        # and parse them into individual simple facts before teaching.
+        if any(conj in ctx.resolved.lower() for conj in (" and ", " or ")):
+            sub_sentences = self._split_compound_sentence(ctx.resolved)
+            
+            # Verify if these split segments actually look like facts 
+            # (i.e. we can successfully detect a valid triple in at least one)
+            valid_triples = []
+            for sub in sub_sentences:
+                clean_sub = sub.replace("cannot", "can not")
+                triple = self.rel_det.detect(clean_sub)
+                if triple and triple.subject not in ("unknown", ""):
+                    valid_triples.append((sub, triple))
+            
+            # If we successfully isolated individual facts, teach them sequentially
+            if valid_triples:
+                responses = []
+                for sub_text, triple in valid_triples:
+                    # Create a mini pipeline context for each clean, simple sentence
+                    sub_ctx = PipelineContext(raw=sub_text, resolved=sub_text)
+                    sub_ctx.triple = triple
+                    sub_ctx.intent = ctx.intent
+                    responses.append(self._run_teach(sub_ctx))
+                
+                # Merge the sequential learning responses
+                combined_response = "\n\n".join(responses)
+                self._record(ctx, combined_response)
+                return combined_response
+
         self.personality.update("greeted")
         response = self.basic_conv.get_casual_response(ctx.resolved)
         self._record(ctx, response)

@@ -76,14 +76,13 @@ class InputParser:
     ############################################################
 
     def normalize(self, text):
-
         if not text:
             return ""
 
         text = str(text).lower().strip()
 
-        # Keep apostrophes but remove other punctuation
-        text = re.sub(r"[^\w\s']", " ", text)
+        # Keep apostrophes AND colons, but remove other punctuation
+        text = re.sub(r"[^\w\s':]", " ", text)
 
         # Collapse spaces
         text = re.sub(r"\s+", " ", text)

@@ -205,6 +205,13 @@ class ConceptReasoner:
         """Determines what kind of reasoning the request requires."""
         text = query.lower()
 
+        concepts = self.extract_concepts(query)
+
+        if len(concepts) >= 2:
+            return PROBLEM_COUNTING
+        
+        text = query.lower()
+
         # Multi-step pipeline detection
         pipeline_words = ["then", "after", "next", "followed by", "and then"]
         if any(word in text for word in pipeline_words):
@@ -267,19 +274,47 @@ class ConceptReasoner:
         )
 
         concepts = self.extract_concepts(query)
+
         if concepts:
-            plan.explanation.append(f"Detected concepts: {concepts}")
+            plan.explanation.append(
+                f"Detected concepts: {concepts}"
+            )
+
 
         # Pipeline
         if problem_type == PROBLEM_PIPELINE:
-            parts = re.split(r"\bthen\b|\band then\b", query, flags=re.IGNORECASE)
+
+            parts = re.split(
+                r"\bthen\b|\band then\b",
+                query,
+                flags=re.IGNORECASE
+            )
+
             for part in parts:
+
                 part = part.strip()
-                if part:
-                    plan.add_step(
-                        ability=ABILITY_ARITHMETIC,
-                        instruction=part
-                    )
+
+                if not part:
+                    continue
+
+                sub_problem = self.classify_problem(part)
+
+                if sub_problem == PROBLEM_ARITHMETIC:
+
+                    ability = ABILITY_ARITHMETIC
+
+                elif sub_problem == PROBLEM_COUNTING:
+
+                    ability = ABILITY_COUNTING
+
+                else:
+
+                    ability = None
+
+                plan.add_step(
+                    ability=ability,
+                    instruction=part
+                )
         # Arithmetic
         elif problem_type == PROBLEM_ARITHMETIC:
             plan.add_step(
@@ -526,7 +561,14 @@ class CountingAbility(Ability):
             )
 
         # Map entities into a dict structure for downstream processing (e.g., OntologyAbility)
-        counts = {item["concept"]: item["quantity"] for item in concepts}
+        counts = {}
+
+        for item in concepts:
+
+            counts[item["concept"]] = (
+                counts.get(item["concept"], 0)
+                + item["quantity"]
+            )
         
         return AbilityResult(
             success=True,

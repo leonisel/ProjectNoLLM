@@ -137,32 +137,25 @@ class ThoughtEngine:
 
         elif intent == "QUESTION":
 
-            def add(
-                self,
-                text,
-                priority=0.5,
-                source="general",
-                confidence=0.7,
-                goal="RESPOND",
-                metadata=None,
-                parse_result=None
-            ):
+            # 1. Add a thought to resolve the question
+            self.add(
+                "The user is asking a question.",
+                priority=1.0,
+                source="conversation",
+                goal="RESPOND"
+            )
+            thought = self.active_thoughts[-1]
+            self._decorate_thought(thought, parse_result)
 
-                thought = Thought(
-                    text=text,
-                    priority=priority,
-                    source=source,
-                    confidence=confidence,
-                    goal=goal,
-                    metadata=metadata or {}
+            # 2. Add an explicit search memory look-up trace if we have entities
+            if entities:
+                joined_entities = ", ".join(f"'{e}'" for e in entities)
+                self.add(
+                    f"Search memory for relationships involving: {joined_entities}.",
+                    priority=0.9,
+                    source="memory",
+                    goal="RETRIEVE_FACT"
                 )
-
-                if parse_result is not None:
-                    self._decorate_thought(thought, parse_result)
-
-                self.active_thoughts.append(thought)
-
-                return thought
 
         ############################################################
         # Teaching

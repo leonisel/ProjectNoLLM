@@ -80,30 +80,26 @@ class ThoughtConsolidator:
     # ==========================================================
 
     def extract_atomic_facts(self, text):
-
         """
-        Very simple V1.
-
-        Splits long thoughts into individual facts.
+        Splits long thoughts into individual facts, while preserving
+        comma-separated lists joined by 'and'.
         """
-
         text = text.replace("\n", ". ")
 
+        # Use a negative lookbehind (?<!,) to ensure we don't split on "and" 
+        # if it's preceded by a comma (which usually marks the end of a list).
+        # We also match spaces around 'and', 'but', 'because'.
         pieces = re.split(
-            r"\.\s+|;\s+|\band\b|\bbut\b|\bbecause\b",
+            r"\.\s+|;\s+|(?<!,)\s+\band\b\s+|\bbut\b|\bbecause\b",
             text,
             flags=re.IGNORECASE
         )
 
         facts = []
-
         for piece in pieces:
-
             piece = piece.strip()
-
             if len(piece) < 5:
                 continue
-
             facts.append(piece)
 
         return facts

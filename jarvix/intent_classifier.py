@@ -259,7 +259,43 @@ class IntentClassifier:
                 value = m.group(1).strip() if m.lastindex else ""
                 return IntentResult(Intent.IDENTITY, object_=value, raw=raw)
 
-        # ── 6. Definition ────────────────────────────────────────────
+        # ── 6. Definition & Colon Fact Parsing ────────────────────────────
+        # First check if the user is using the custom teaching format "subject: definition/fact"
+        if ":" in raw:
+            parts = raw.split(":", 1)
+            subj = parts[0].strip()
+            fact_body = parts[1].strip()
+            
+            # Clean up relation/copula words to extract subject, predicate, and object
+            # e.g., "is a", "is the", "are", "has the property"
+            relation_match = re.match(
+                r"^(is\s+a|is\s+the|is|are|means|has\s+the\s+property|refers\s+to|defines)\s+(.+)$", 
+                fact_body, 
+                re.IGNORECASE
+            )
+            
+            if relation_match:
+                pred = relation_match.group(1).strip().lower()
+                obj = relation_match.group(2).strip()
+            else:
+                pred = "is_a"
+                obj = fact_body
+
+            # Strip leading articles from object to keep node names clean in the Knowledge Graph
+            noise_words = ["the ", "a ", "an "]
+            for word in noise_words:
+                if obj.lower().startswith(word):
+                    obj = obj[len(word):]
+
+            return IntentResult(
+                Intent.TEACH, 
+                subject=subj, 
+                predicate=pred, 
+                object_=obj, 
+                raw=raw
+            )
+
+        # Fallback to standard definition regex patterns if no colon is present
         for pattern in _DEFINITION_PATTERNS:
             m = pattern.match(raw.strip())
             if m:

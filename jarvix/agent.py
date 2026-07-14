@@ -233,9 +233,21 @@ class Jarvix:
         if hasattr(self.ec, "_last_triples"):
             triples_learned = self.ec._last_triples
 
+        # Get the intent of the turn that was just processed
+        current_intent = -1
+        if self.working_memory.turns:
+            current_turn = self.working_memory.turns[-1]
+            try:
+                from .intent_classifier import Intent
+                current_intent = next(
+                    (v for k, v in Intent._NAMES.items()
+                     if v == current_turn.intent), -1)
+            except Exception:
+                pass
+
         voice_ctx = self.inner_voice.post_process(
             actual_topic  = actual_topic,
-            actual_intent = last_intent,
+            actual_intent = current_intent,  # <-- Passed correctly now
             response_found= "don't know" not in response.lower(),
             triples_learned = triples_learned,
         )
